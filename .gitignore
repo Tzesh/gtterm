@@ -1,0 +1,7 @@
+/state/
+/cache/
+/local.zsh
+/original.zshrc
+/installed-fonts.txt
+/.zcompdump*
+.DS_Store

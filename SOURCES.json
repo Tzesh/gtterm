@@ -1,0 +1,32 @@
+[
+  {
+    "name": "oh-my-zsh",
+    "repository": "https://github.com/ohmyzsh/ohmyzsh",
+    "commit": "2100c630ba4bd67bb48802c3e7da893a4fdaa1a0"
+  },
+  {
+    "name": "powerlevel10k",
+    "repository": "https://github.com/romkatv/powerlevel10k",
+    "commit": "d05a1b00f9a61f9578bf9dc19b8451942dde8734"
+  },
+  {
+    "name": "zsh-autosuggestions",
+    "repository": "https://github.com/zsh-users/zsh-autosuggestions",
+    "commit": "85919cd1ffa7d2d5412f6d3fe437ebdbeeec4fc5"
+  },
+  {
+    "name": "zsh-autocomplete",
+    "repository": "https://github.com/marlonrichert/zsh-autocomplete",
+    "commit": "77706d4cf24866bf62b865d97e9ef7d8bc38bd6e"
+  },
+  {
+    "name": "zsh-syntax-highlighting",
+    "repository": "https://github.com/zsh-users/zsh-syntax-highlighting",
+    "commit": "e6683f20e5c38d3e5447f45845d04ddda75d0f23"
+  },
+  {
+    "name": "zasync",
+    "repository": "https://github.com/marlonrichert/zasync",
+    "commit": "dcdc53e2ab1764633248633725b4e2c0a57c26c1"
+  }
+]

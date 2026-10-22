@@ -1,0 +1,10 @@
+[
+  {
+    "url": "https://github.com/romkatv/gitstatus/releases/download/v1.5.4/gitstatusd-darwin-arm64.tar.gz",
+    "sha256": "eae979e990ca37c56ee39fadd0c3f392cbbd0c6bdfb9a603010be60d9e48910a"
+  },
+  {
+    "url": "https://github.com/romkatv/gitstatus/releases/download/v1.5.4/gitstatusd-darwin-x86_64.tar.gz",
+    "sha256": "9fd3913ec1b6b856ab6e08a99a2343f0e8e809eb6b62ca4b0963163656c668e6"
+  }
+]

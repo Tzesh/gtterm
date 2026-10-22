@@ -1,0 +1,16 @@
+#compdef gtterm
+local -a subcommands=(help status doctor lang theme proxy chrome ports java docs reload version)
+case $CURRENT in
+  2) _describe command subcommands ;;
+  3)
+    case $words[2] in
+      lang) compadd en tr ;;
+      theme) compadd mocha nord latte ;;
+      proxy) compadd on off auto status ;;
+      ports) compadd java jboss 8080 8443 9990 9993 8787 ;;
+      java) compadd list ;;
+      chrome) compadd jboss.local ;;
+      docs) compadd guide commands troubleshooting ;;
+    esac ;;
+  4) [[ $words[2] == proxy && $words[3] == auto ]] && compadd on off status ;;
+esac

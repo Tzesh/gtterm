@@ -1,0 +1,19 @@
+[
+  {
+    "repository": "https://github.com/catppuccin/iterm",
+    "commit": "b2936a6e55270fcc55421b1bb7d5fd194a489591",
+    "files": [
+      "colors/catppuccin-mocha.itermcolors",
+      "colors/catppuccin-latte.itermcolors",
+      "LICENSE"
+    ]
+  },
+  {
+    "repository": "https://github.com/nordtheme/iterm2",
+    "commit": "233a2462e04e07a9676386a52dad0c2ff6666d72",
+    "files": [
+      "src/xml/Nord.itermcolors",
+      "license"
+    ]
+  }
+]

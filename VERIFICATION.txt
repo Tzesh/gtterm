@@ -1,0 +1,37 @@
+gtterm 2.1.0 — verification record
+Date: 2026-10-22 (Europe/Istanbul)
+Host: Apple Silicon macOS; Zsh 5.9; iTerm2 3.6.10
+
+PASS — clean, offline fresh-user install and interactive shell startup
+PASS — English default, English/Turkish installation and uninstallation
+PASS — language persistence across shells, invalid selection rejection, English fallback
+PASS — help/version/status/doctor/docs/reload and existing helper routing
+PASS — required-file diagnostics and helper-only versus full-shell detection
+PASS — gtterm tab-completion registration
+PASS — all relative documentation links and six bilingual guide/reference/troubleshooting files
+PASS — current-shell proxy variables, saved endpoint and auto-start on/off
+PASS — invalid proxy/hostname/port inputs and unknown CLI arguments rejected
+PASS — Chrome launcher arguments and default jboss.local mapping route
+PASS — live TCP listener PID/port matching, Java/common-JBoss filters and IPv6
+PASS — three theme palettes, history suggestions and right-arrow acceptance
+PASS — installer refuses an existing installation; uninstall preserves user aliases
+PASS — actual gtterm - Mocha iTerm session reports full shell with no missing required files
+PASS — existing user .zshrc, .zprofile and .p10k.zsh contents unaffected by this release update
+
+Previous release baseline: actual curl HTTP proxy, HTTPS CONNECT proxy and real Chrome
+hostname mapping were exercised against local test servers. Those underlying network
+operations remain unchanged; this release additionally checks their CLI routing.
+
+Not exercised: Intel hardware, workplace proxy/JBoss, corporate Chrome policies.
+No running user sessions were restarted. The installer now saves Nord as the default iTerm profile and records the previous
+preference before removal. A running iTerm may retain its cached default until restarted. Existing profile GUIDs and local data
+paths are retained. gtterm does not deploy, publish, start JBoss or kill processes.
+
+2.1.0 checks:
+PASS — old package aliases/functions removed on reload; only gtterm is public
+PASS — existing main CLI, translations, proxy, Chrome launcher, Java/ports remain functional
+PASS — installer selects Nord; removal restores a previous default or an unset preference
+PASS — removal preserves a later unrelated user-selected default
+PASS — a failed default preference write rolls back package files and .zshrc changes
+PASS — offline interactive startup, completion and all three palette changes
+PASS — actual gtterm - Nord session reports Theme: nord and full shell
