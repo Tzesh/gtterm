@@ -66,3 +66,9 @@ Bu koruyucu bir reddetmedir, yarım kalmış bir yükseltme değildir. Kılavuzd
 ## Ek bilgi
 
 `gtterm status` yol ve sürümü, `gtterm docs commands` desteklenen girdileri ve sınırları gösterir. Sürüm kontrolleri `VERIFICATION.txt` içindedir. Yerel tercihler, kişisel ayarlar ve Chrome verileri özel kalmalı; dağıtılacak ZIP'e girmemelidir.
+
+## Apple `gitstatusd-darwin-arm64` dosyasını doğrulayamıyor
+
+macOS, tarayıcıdan indirilmiş arşivdeki noter onayı olmayan gitstatusd programını engelleyebilir. gtterm 2.1.1 itibarıyla Powerlevel10k’ın Zsh `vcs_info` altyapısını kullanır; gitstatusd başlatılmaz. Git dalı/durum bilgisi korunur; büyük depolarda güncellenmesi biraz daha yavaş olabilir. Yönetici yetkisi veya Gatekeeper değişikliği gerekmez.
+
+Mevcut 2.1.0 kurulumunda `~/.config/iterm-pack/p10k.zsh` dosyasına `typeset -g POWERLEVEL9K_DISABLE_GITSTATUS=true` ekleyip yeni bir gtterm oturumu açın. `gtterm reload` yalnızca yardımcı komutları yükler; bu prompt değişikliği için yeni oturum gerekir.

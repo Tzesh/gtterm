@@ -15,5 +15,47 @@
       "src/xml/Nord.itermcolors",
       "license"
     ]
+  },
+  {
+    "repository": "https://github.com/mbadolato/iTerm2-Color-Schemes",
+    "commit": "74e6e762b83c9ede7bb5ec9dce855cc8aed54f3b",
+    "files": [
+      "schemes/Catppuccin Frappe.itermcolors",
+      "schemes/Catppuccin Macchiato.itermcolors",
+      "schemes/Dracula.itermcolors",
+      "schemes/TokyoNight Night.itermcolors",
+      "schemes/TokyoNight Storm.itermcolors",
+      "schemes/Gruvbox Dark.itermcolors",
+      "schemes/Gruvbox Light.itermcolors",
+      "schemes/Rose Pine.itermcolors",
+      "schemes/Rose Pine Moon.itermcolors",
+      "schemes/Rose Pine Dawn.itermcolors",
+      "schemes/iTerm2 Solarized Dark.itermcolors",
+      "schemes/iTerm2 Solarized Light.itermcolors",
+      "schemes/Atom One Dark.itermcolors",
+      "schemes/GitHub Dark.itermcolors",
+      "schemes/Monokai Classic.itermcolors",
+      "LICENSE",
+      "CREDITS.md"
+    ],
+    "sha256": {
+      "schemes/Catppuccin Frappe.itermcolors": "f6064674b2684677f967794cd4471c0214bf325a16e3c6b67183ac9d80a4c7c0",
+      "schemes/Catppuccin Macchiato.itermcolors": "728442312668e5c8256f5e329021945039310cf9a9fb73ba31c65de8da7e1f5d",
+      "schemes/Dracula.itermcolors": "3a5e9de18769af5048e21cf8ea93153b879196ad5362336f97cb35247b1294e3",
+      "schemes/TokyoNight Night.itermcolors": "2de67653f077c92679bcb92fd2c41b1b985799bcd7078ce7ee7c22137399fae7",
+      "schemes/TokyoNight Storm.itermcolors": "abde56e682b1416590d7501c57da3c33e80c985968e06f1e8d63f1d8b77436d3",
+      "schemes/Gruvbox Dark.itermcolors": "318fe8fef28a7385d26e101d60eb0e542b31e5e47cf356a86c8d63654867e25b",
+      "schemes/Gruvbox Light.itermcolors": "d0fdeadb142ad6f195929ec0e869771dae6d7d0fab1611f2752fcd54347efeb0",
+      "schemes/Rose Pine.itermcolors": "9902c20faa6006c2fba677053ad9dfaaeb6269b0acbe2c1f412794cd09d41192",
+      "schemes/Rose Pine Moon.itermcolors": "583c0c961ea790d7db5bd5c4e0ba43e8c3f9d1384967b62829d8e57d4e2e80fc",
+      "schemes/Rose Pine Dawn.itermcolors": "35368744655c7fb2c193a452d0c557eba9f3473d0f6dc41599fd7c985a2a2a1f",
+      "schemes/iTerm2 Solarized Dark.itermcolors": "be90a488ff3209425f19978ac3b0a13f4337055ee9e77e880d7bea64ca21fb23",
+      "schemes/iTerm2 Solarized Light.itermcolors": "eb388f0a1f9243d57d880612273706e8867311d0333b54d3baa2d3f58bc8ba41",
+      "schemes/Atom One Dark.itermcolors": "a57c2f2ef7bd349949b34e32ebff69f0a62c3099d5b50a92065647b646ae516a",
+      "schemes/GitHub Dark.itermcolors": "0ac6938f9183eb0b09667b1c2f60db6fa2ec5457ed7ede200d437519c4477b58",
+      "schemes/Monokai Classic.itermcolors": "6b607e1dc8c2fe51b0b8b008d57920deecf3572bd620e1eaf88bf156e67b6149",
+      "LICENSE": "2373168614b527494dff99eb393024608216db79f687d58bad420f6c1e0ad192",
+      "CREDITS.md": "40a909ff0d6f77570c077f8f5c3099517641983f2f036d2921deb90c2d2eb526"
+    }
   }
 ]

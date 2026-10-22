@@ -4,7 +4,7 @@
 
 ## Paketin içeriği
 
-Tam iTerm profilleri Oh My Zsh, Powerlevel10k, MesloLGS NF, zsh-autosuggestions, zsh-autocomplete, zasync ve komut renklendirmesini bir araya getirir. **gtterm - Mocha** koyu/pastel, **gtterm - Nord** soğuk gri/mavi, **gtterm - Latte** açık temadır. Öneriler, vurgu renkleri ve prompt aynı paleti kullanır. Önceki komutların prompt'u kısalarak çıktılara yer açar.
+Tam iTerm profilleri Oh My Zsh, Powerlevel10k, MesloLGS NF, zsh-autosuggestions, zsh-autocomplete, zasync ve komut renklendirmesini bir araya getirir. 18 profil bulunur: örneğin **gtterm - Mocha** koyu/pastel, **gtterm - Nord** soğuk gri/mavi, **gtterm - Latte** açık temadır. Öneriler, vurgu renkleri ve prompt aynı paleti kullanır. Önceki komutların prompt'u kısalarak çıktılara yer açar.
 
 Yardımcı komutlar normal Zsh oturumlarında da kullanılabilir. Ancak yalnızca yardımcı komutları yüklemek, normal profile tüm görünümü ve eklentileri eklemez. `gtterm doctor` hangi durumda olduğunuzu gösterir.
 
@@ -12,7 +12,7 @@ Yardımcı komutlar normal Zsh oturumlarında da kullanılabilir. Ancak yalnızc
 
 ZIP'i açın. `zsh /gercek/yol/gtterm/install.zsh` çalıştırın veya Terminal'e `zsh ` yazıp kurulum dosyasını pencereye sürükleyin. Örnekteki yol yerine gerçek dosyanın yolunu kullanın.
 
-Türkçe kurulum için komutun sonuna `--lang tr` ekleyin. Varsayılan İngilizcedir. Kurucu macOS/Zsh sürümünü kontrol eder, paket dosyalarını kopyalar, eksik kullanıcı fontlarını ekler ve üç dinamik iTerm profili kaydeder. Var olan `.zshrc` dosyasını kurulum klasörüne yedekler; mevcut satırları değiştirmeden işaretli bir yardımcı komut bloğu ekler.
+Türkçe kurulum için komutun sonuna `--lang tr` ekleyin. Varsayılan İngilizcedir. Kurucu macOS/Zsh sürümünü kontrol eder, paket dosyalarını kopyalar, eksik kullanıcı fontlarını ekler ve 18 dinamik iTerm profili kaydeder. Var olan `.zshrc` dosyasını kurulum klasörüne yedekler; mevcut satırları değiştirmeden işaretli bir yardımcı komut bloğu ekler.
 
 Kurucu **gtterm - Nord** profilini varsayılan kaydeder; önceki varsayılanı kaldırmada geri yüklemek üzere saklar. Hemen **iTerm → Profiles → gtterm - Nord** açabilir veya kaydedilen varsayılanın geçerli olması için uygun olduğunda iTerm’i yeniden açabilirsiniz. Varsayılanı değiştirmek açık oturumları dönüştürmez. gtterm iTerm'i kapatmaz veya çalışan işlerinizi kesmez.
 
@@ -71,7 +71,7 @@ Bu sürüm proxy adresinde kullanıcı/parola, SOCKS URL'si ve IPv6 proxy sunucu
 - Ctrl+R geçmişte arar.
 - Cmd+D / Cmd+Shift+D iTerm bölmesini dikey/yatay böler.
 - Cmd+Option+ok bölmeler arasında geçer; Cmd+Shift+Enter seçili bölmeyi büyütür/geri getirir.
-- `gtterm theme mocha|nord|latte` yalnızca mevcut oturumu değiştirir. Sonraki oturumun teması açılan iTerm profilinden gelir.
+- `gtterm theme <ad>` yalnızca mevcut oturumu değiştirir. Sonraki oturumun teması açılan iTerm profilinden gelir.
 
 Prompt için kurulum klasöründeki `p10k.zsh`, profil görünümü için dinamik profil JSON'u düzenlenebilir. Burada `p10k configure` kullanmayın: sihirbaz paketin dosyası yerine normal varsayılan dotfile'lara yazabilir.
 
@@ -123,3 +123,6 @@ zsh ~/.config/iterm-pack/uninstall.zsh
 ```
 
 Kaldırıcı dinamik gtterm profillerini, yardımcı komut bloğunu ve çalışma klasörünü kaldırır. Diğer `.zshrc` satırları, ortak Meslo fontları ve Chrome geliştirme verileri korunur. Bu Mac'te önceki varsayılan profil kaydedilmişse ve mevcut varsayılan hâlâ gtterm ise o tercih geri yüklenir. Açık terminaller kapanana kadar yüklenmiş fonksiyonları tutar. Çalışma klasöründeki yerel tercihler silinir; gerekiyorsa önce yedekleyin.
+
+
+[18 temanın tamamı ve örnekler](themes.md).

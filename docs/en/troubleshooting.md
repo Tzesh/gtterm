@@ -66,3 +66,9 @@ This is a protective refusal, not a partial upgrade. Follow the private backup/u
 ## Where to find details
 
 `gtterm status` shows the runtime path/version. `gtterm docs commands` lists the exact supported inputs and limits. `VERIFICATION.txt` records the release checks. Runtime state, personal settings and Chrome data should stay private and out of shared ZIPs.
+
+## Apple could not verify `gitstatusd-darwin-arm64`
+
+macOS can block the unnotarized gitstatusd executable in a browser-downloaded archive. Starting with 2.1.1, gtterm uses Powerlevel10k’s Zsh `vcs_info` backend and never starts gitstatusd. Git branch/status information remains available; large repositories may update more slowly. No administrator access or Gatekeeper changes are needed.
+
+For an existing 2.1.0 installation, add `typeset -g POWERLEVEL9K_DISABLE_GITSTATUS=true` to `~/.config/iterm-pack/p10k.zsh`, then open a new gtterm session. `gtterm reload` reloads helpers only, so it does not apply this prompt change.

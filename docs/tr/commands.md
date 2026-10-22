@@ -90,3 +90,6 @@ JBoss filtresi port filtresidir; kesin sunucu tanımlaması yapmaz. Özel portla
 Başarılı işlemler genellikle 0 döner. Geçersiz parametre/adres/alan adı, gerekli dosya/veri eksikliği veya başlatıcı hatası sıfırdan farklı döner. Boş süreç/port listesi normal sonuçtur.
 
 Tercihler `~/.config/iterm-pack/state` altında düz veri olarak tutulur; shell kodu olarak değerlendirilmez. Diğer Mac'leri etkilemez. Kurulu klasörü ZIP'lemek yerine temiz dağıtım ZIP'ini paylaşın.
+
+
+[18 temanın tamamı ve örnekler](themes.md).

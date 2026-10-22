@@ -1,4 +1,6 @@
 # A compact two-line Powerlevel10k prompt.
+# Use Zsh vcs_info so downloaded packages never execute an unnotarized gitstatusd.
+typeset -g POWERLEVEL9K_DISABLE_GITSTATUS=true
 typeset -g POWERLEVEL9K_MODE=nerdfont-complete
 typeset -g POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon dir vcs newline prompt_char)
 typeset -g POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status command_execution_time background_jobs virtualenv context)

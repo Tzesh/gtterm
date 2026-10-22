@@ -5,6 +5,7 @@ umask 077
 root=${0:A:h}
 TERMINAL_PACK_DIR=$root
 source "$root/i18n.zsh"
+source "$root/themes.zsh"
 if (( $# )); then
   [[ $# == 2 && $1 == --lang && ($2 == en || $2 == tr) ]] || { print -u2 'Usage: zsh install.zsh [--lang en|tr]'; exit 1; }
   GTTERM_LANG=$2
@@ -32,7 +33,7 @@ _rollback() {
 trap _rollback ZERR
 mkdir "$target"
 cp -R "$root/vendor" "$root/fonts" "$root/themes" "$root/docs" "$root/completions" "$target/"
-for name in .zprofile .zshrc p10k.zsh appearance.zsh colors.zsh devtools.zsh gtterm.zsh i18n.zsh README.md CHANGELOG.md VERIFICATION.txt FONT-SOURCES.json GITSTATUS-SOURCES.json SOURCES.json THEME-SOURCES.json VERSION uninstall.zsh; do cp "$root/$name" "$target/$name"; done
+for name in .zprofile .zshrc p10k.zsh appearance.zsh themes.zsh colors.zsh devtools.zsh gtterm.zsh i18n.zsh README.md CHANGELOG.md VERIFICATION.txt FONT-SOURCES.json GITSTATUS-SOURCES.json SOURCES.json THEME-SOURCES.json VERSION uninstall.zsh; do cp "$root/$name" "$target/$name"; done
 mkdir -p "$target/cache/omz" "$target/custom" "$target/state"
 print -r -- "$GTTERM_LANG" > "$target/state/language"
 for font in "$root"/fonts/*.ttf; do
@@ -44,9 +45,8 @@ for font in "$root"/fonts/*.ttf; do
 done
 print -rl -- "${added_fonts[@]}" > "$target/installed-fonts.txt"
 cp "$root/profile.json" "$target/profile.json"
-themes=(mocha nord latte)
-for index in 0 1 2; do
-  theme=$themes[$((index + 1))]
+for (( index=0; index < ${#GTTERM_THEMES}; ++index )); do
+  theme=$GTTERM_THEMES[$((index + 1))]
   command="/usr/bin/env ZDOTDIR=${(q)target} TERMINAL_PACK_THEME=$theme /bin/zsh -l"
   /usr/bin/plutil -replace "Profiles.$index.Command" -string "$command" "$target/profile.json"
 done

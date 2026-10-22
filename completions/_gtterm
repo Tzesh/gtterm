@@ -5,12 +5,12 @@ case $CURRENT in
   3)
     case $words[2] in
       lang) compadd en tr ;;
-      theme) compadd mocha nord latte ;;
+      theme) compadd list $GTTERM_THEMES ;;
       proxy) compadd on off auto status ;;
       ports) compadd java jboss 8080 8443 9990 9993 8787 ;;
       java) compadd list ;;
       chrome) compadd jboss.local ;;
-      docs) compadd guide commands troubleshooting ;;
+      docs) compadd guide commands themes troubleshooting ;;
     esac ;;
   4) [[ $words[2] == proxy && $words[3] == auto ]] && compadd on off status ;;
 esac

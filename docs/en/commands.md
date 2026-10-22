@@ -90,3 +90,6 @@ Java tools prefer `$JAVA_HOME/bin/jps`, then `jps` on PATH. gtterm excludes the 
 Successful inspection/actions normally return 0. Invalid arguments, invalid proxy/host input, missing required data/files or a failed launcher return nonzero. An empty process/listener list is a valid result, not an error.
 
 State is plain local data under `~/.config/iterm-pack/state`; it is never evaluated as shell code. Preferences affect this Mac, not other machines. To share the setup, copy the clean ZIP rather than zipping your installed directory.
+
+
+[All 18 themes and examples](themes.md).

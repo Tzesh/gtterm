@@ -4,7 +4,7 @@
 
 ## What gtterm includes
 
-The full iTerm profiles combine Oh My Zsh, Powerlevel10k, MesloLGS NF, zsh-autosuggestions, zsh-autocomplete, zasync and syntax highlighting. The three profiles are **gtterm - Mocha** (dark pastel), **gtterm - Nord** (cool gray/blue) and **gtterm - Latte** (light). Colors, suggestions and prompt segments follow the same palette. Previous prompts collapse to leave more room for output.
+The full iTerm profiles combine Oh My Zsh, Powerlevel10k, MesloLGS NF, zsh-autosuggestions, zsh-autocomplete, zasync and syntax highlighting. The collection includes 18 profiles, including **gtterm - Mocha** (dark pastel), **gtterm - Nord** (cool gray/blue) and **gtterm - Latte** (light). Colors, suggestions and prompt segments follow the same palette. Previous prompts collapse to leave more room for output.
 
 The helper commands are also available in ordinary Zsh sessions. Helpers alone do not load the full prompt/plugins into those sessions. `gtterm doctor` reports which mode you are using.
 
@@ -12,7 +12,7 @@ The helper commands are also available in ordinary Zsh sessions. Helpers alone d
 
 Extract the ZIP. Run `zsh /path/to/gtterm/install.zsh`, or type `zsh ` and drag the actual installer file into Terminal. `/path/to` is a placeholder, not a literal directory.
 
-Use `zsh /path/to/gtterm/install.zsh --lang tr` for Turkish setup. The default is English. The installer checks for macOS/Zsh, copies the bundled files, adds missing user fonts and registers three dynamic iTerm profiles. It backs up an existing `.zshrc` in the installation directory and appends a marked helper block without replacing your lines.
+Use `zsh /path/to/gtterm/install.zsh --lang tr` for Turkish setup. The default is English. The installer checks for macOS/Zsh, copies the bundled files, adds missing user fonts and registers 18 dynamic iTerm profiles. It backs up an existing `.zshrc` in the installation directory and appends a marked helper block without replacing your lines.
 
 The installer saves **gtterm - Nord** as the default iTerm profile and stores the previous default for removal. Open **iTerm → Profiles → gtterm - Nord** immediately, or reopen iTerm when safe for the saved default to take effect. Changing the default does not convert existing sessions. gtterm does not close/restart iTerm or interrupt your running jobs.
 
@@ -71,7 +71,7 @@ Credentials, SOCKS URLs and IPv6 proxy hosts are not supported by this version's
 - Ctrl+R searches history.
 - Cmd+D / Cmd+Shift+D split the iTerm pane vertically/horizontally.
 - Cmd+Option+arrow moves between panes; Cmd+Shift+Enter zooms/restores the current pane.
-- `gtterm theme mocha|nord|latte` changes only this session. The selected iTerm profile determines the theme of the next session.
+- `gtterm theme <name>` changes only this session. The selected iTerm profile determines the theme of the next session.
 
 Edit `p10k.zsh` in the installation folder for prompt segments, or edit the dynamic profile JSON for profile appearance. Avoid `p10k configure` here: its wizard may write to your normal default dotfiles rather than the package's prompt file.
 
@@ -123,3 +123,6 @@ zsh ~/.config/iterm-pack/uninstall.zsh
 ```
 
 The uninstaller removes the gtterm dynamic profiles, the marked helper block and the installed runtime. It preserves other `.zshrc` lines, shared Meslo fonts and Chrome development data. If this Mac has a saved previous default profile and the current default is still gtterm, it restores that saved preference. Existing shells retain already-loaded functions until they close. Local preferences inside the installation folder are deleted, so back them up first if needed.
+
+
+[All 18 themes and examples](themes.md).

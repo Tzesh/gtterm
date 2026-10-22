@@ -1,3 +1,33 @@
+gtterm 2.2.0 — verification record
+Date: 2026-10-22 (Europe/Istanbul)
+
+PASS — 18 unique profiles, original three GUIDs preserved, Nord default unchanged
+PASS — all 18 palettes match prompt base colors and suggestion highlights
+PASS — theme list, completion catalog, invalid name rejection without changing theme
+PASS — all 18 themes switch in an interactive Powerlevel10k session
+PASS — Git branch appears without executing blocked gitstatusd fixtures
+PASS — offline fresh install and uninstall restore previous defaults for new themes too
+PASS — English/Turkish, proxy controls, Chrome mapping, doctor, docs links, user aliases
+PASS — README unchanged; self-contained theme gallery JavaScript syntax checked
+
+Theme gallery is a browser approximation; exact font rendering depends on iTerm.
+Previous release verification follows:
+
+gtterm 2.1.1 — verification record
+Date: 2026-10-22 (Europe/Istanbul)
+
+PASS — reproduced gitstatusd launch attempt with a failing daemon fixture before the fix
+PASS — fixed interactive startup never executes either blocked gitstatusd binary
+PASS — Git branch appears in the actual prompt using the vcs_info fallback
+PASS — all three themes, history suggestions, completion widgets and key bindings
+PASS — offline install/uninstall with administrator tools and network operations blocked
+PASS — existing user dotfiles unchanged; README unchanged
+
+Browser-download Gatekeeper dialog is reported by the user; it was not reproduced on this host.
+This fix avoids executing the affected binary and does not remove quarantine attributes.
+
+Previous release verification follows:
+
 gtterm 2.1.0 — verification record
 Date: 2026-10-22 (Europe/Istanbul)
 Host: Apple Silicon macOS; Zsh 5.9; iTerm2 3.6.10

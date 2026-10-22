@@ -1,5 +1,19 @@
 # Changelog
 
+## 2.2.0 — 18 coordinated themes
+
+- Added 15 themes with matching iTerm palettes, Powerlevel10k colors, suggestions and syntax highlights.
+- Added `gtterm theme list` and tab completion for every theme.
+- Kept Nord as the default and preserved the original three profile identifiers.
+- All theme files are bundled; install and switching require no downloads, sudo or Homebrew.
+- Retained the 2.1.1 fix that avoids launching gitstatusd.
+
+## 2.1.1 — Git prompt without gitstatusd
+
+- Use Powerlevel10k’s Zsh `vcs_info` backend instead of executing the bundled unnotarized gitstatusd binary.
+- Avoid the macOS verification alert after browser downloads without changing Gatekeeper settings or removing quarantine attributes.
+- Keep the Git branch/status prompt; large repositories may update more slowly.
+
 ## 2.1.0 — one entrypoint, Nord by default
 
 - Installer selects gtterm - Nord as the saved default profile and restores the previous preference on removal. Existing sessions are preserved.

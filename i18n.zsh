@@ -6,7 +6,7 @@ fi
 [[ $GTTERM_LANG == en || $GTTERM_LANG == tr ]] || GTTERM_LANG=en
 typeset -gA _GT_EN=(
   theme_unset 'not selected in this shell'
-  theme_usage 'Usage: gtterm theme mocha | nord | latte'
+  theme_usage 'Usage: gtterm theme [list|name] — gtterm theme list'
   proxy_format 'Proxy format: host:port or http://host:port (no username/password).'
   port_range 'Port must be between 1 and 65535.'
   proxy_usage 'Usage: gtterm proxy on [host:port]'
@@ -41,7 +41,7 @@ typeset -gA _GT_EN=(
   lang_set 'Language: %s. New sessions will use this preference.'
   unknown 'Unknown command: %s. Run gtterm help.'
   args 'Unexpected arguments. Run gtterm help.'
-  docs_usage 'Usage: gtterm docs [guide | commands | troubleshooting]'
+  docs_usage 'Usage: gtterm docs [guide | commands | themes | troubleshooting]'
   docs_missing 'Documentation file is missing: %s'
   loaded 'gtterm reloaded.'
   status_version 'Version: %s'
@@ -73,7 +73,7 @@ typeset -gA _GT_EN=(
 )
 typeset -gA _GT_TR=(
   theme_unset 'bu oturumda seçilmedi'
-  theme_usage 'Kullanım: gtterm theme mocha | nord | latte'
+  theme_usage 'Kullanım: gtterm theme [list|name] — gtterm theme list'
   proxy_format 'Proxy biçimi: host:port veya http://host:port (kullanıcı/parola eklemeyin).'
   port_range 'Port 1–65535 arasında olmalı.'
   proxy_usage 'Kullanım: gtterm proxy on [host:port]'
@@ -108,7 +108,7 @@ typeset -gA _GT_TR=(
   lang_set 'Dil: %s. Yeni oturumlar bu tercihi kullanacak.'
   unknown 'Bilinmeyen komut: %s. gtterm help komutunu çalıştırın.'
   args 'Beklenmeyen parametreler. gtterm help komutunu çalıştırın.'
-  docs_usage 'Kullanım: gtterm docs [guide | commands | troubleshooting]'
+  docs_usage 'Kullanım: gtterm docs [guide | commands | themes | troubleshooting]'
   docs_missing 'Dokümantasyon dosyası bulunamadı: %s'
   loaded 'gtterm yeniden yüklendi.'
   status_version 'Sürüm: %s'
