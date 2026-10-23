@@ -1,3 +1,13 @@
+gtterm 3.0.1 — automatic user CLI PATH
+Date: 2026-10-23 (Europe/Istanbul)
+
+PASS — Missing ~/.local/bin is appended automatically; existing entries retain their position; repeated startup/reload adds no duplicates. Paths with spaces and a not-yet-created directory are supported without creating it.
+PASS — New full gtterm login shells and gtterm reload find a test agent executable without manual PATH configuration or execution. Existing local.zsh PATH lines remain compatible. Unrelated ~/.zshrc is not sourced; gitstatus remains disabled.
+PASS — No dependencies, network requests, provider commands or shell configuration edits added by PATH initialization. Bundled tools retain their existing precedence.
+LIMIT — User-installed tools can be discovered; this does not verify their authentication or runtime compatibility. No authenticated provider session was launched for this change.
+
+Previous 3.0.0 verification follows (underlying functionality unchanged):
+
 gtterm 3.0.0 — verification record
 Date: 2026-10-23 (Europe/Istanbul)
 

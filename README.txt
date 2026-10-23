@@ -1,4 +1,4 @@
-gtterm 3.0.0
+gtterm 3.0.1
 
 Start with README.md.
 Install or update: zsh install.zsh --trust-tools

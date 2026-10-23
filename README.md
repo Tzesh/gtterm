@@ -8,7 +8,7 @@ English is the default. Use `gtterm lang tr` for Turkish; command names stay in 
 
 Install iTerm2 separately if needed; gtterm includes Oh My Zsh, Powerlevel10k, completion/suggestion plugins, fonts and tools, but does not install the iTerm2 application.
 
-Download and extract **gtterm-macos.zip** from [Releases](https://github.com/Tzesh/gtterm/releases/latest). From the extracted `gtterm` folder, use the same command for a first install or an update:
+Download and extract **gtterm-macos.zip** from [Releases](https://github.com/Tzesh/gtterm/releases/latest), or GitHub’s **Source code (zip)** archive. From the extracted `gtterm` folder, use the same command for a first install or an update:
 
 ```sh
 zsh install.zsh --trust-tools
@@ -60,7 +60,7 @@ gtterm proxy auto on
 gtterm chrome                       # jboss.local -> 127.0.0.1, HTTP port 80
 ```
 
-Ctrl+R searches history; Ctrl+T finds files with previews; Option+C selects a directory when Option sends Esc+. Normal Tab completion and inline suggestions remain available. AI readiness checks do not install or authenticate Cursor, Codex, Copilot or Claude Code. Use a separate tab for helpers while an interactive CLI owns the input.
+Ctrl+R searches history; Ctrl+T finds files with previews; Option+C selects a directory when Option sends Esc+. Normal Tab completion and inline suggestions remain available. `~/.local/bin` is recognized automatically in new gtterm sessions and after `gtterm reload`; no manual PATH line is needed for tools installed there. Existing PATH order is retained; the directory is appended only when missing. AI readiness checks do not install or authenticate Cursor, Codex, Copilot or Claude Code. Use a separate tab for helpers while an interactive CLI owns the input.
 
 ## Documentation
 

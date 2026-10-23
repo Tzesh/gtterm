@@ -99,3 +99,9 @@ Paket lazygit ayarında otomatik fetch ve güncelleme kontrolü kapalıdır. Se�
 
 
 [Yerleşik yazı efektleri ve retro fontlar](effects.md), arka plan resmi/saydamlık ayarlarından bağımsızdır.
+
+## Kullanıcı tarafından kurulan CLI araçları
+
+3.0.1 itibarıyla `~/.local/bin`, tam gtterm profillerinde ve gtterm yardımcılarını yükleyen Zsh oturumlarında otomatik tanınır. PATH içinde varsa konumu korunur; yoksa sona eklenir. Paket araçlarının önceliği korunur. Dizin oluşturulmaz, CLI kurulmaz veya çalıştırılmaz. Sonradan bu dizine kurulan araçlar için de yeniden PATH düzenlemek gerekmez.
+
+Güncellemeden sonra yeni gtterm sekmesi açın veya `gtterm reload` çalıştırıp `command -v agent` ile doğrulayın. Release ZIP ve GitHub Source code ZIP tam kurucuyu içerir. Yalıtılmış gtterm profilinde PATH yenilemek için normal `~/.zshrc` dosyanızı source etmeyin; farklı bir Powerlevel10k ayarını yükleyebilir. `local.zsh` içindeki mevcut kişisel PATH satırları desteklenmeye devam eder.

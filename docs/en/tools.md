@@ -99,3 +99,9 @@ The bundled lazygit default config disables automatic fetch and update checks. M
 
 
 [Native text effects and retro fonts](effects.md) are separate from background image/transparency settings.
+
+## User-installed CLI tools
+
+Starting with 3.0.1, `~/.local/bin` is added automatically in full gtterm profiles and helper-enabled Zsh shells. If already on PATH, its position is preserved; otherwise it is appended. gtterm’s bundled tools keep their existing precedence. No directory is created and no CLI is installed or executed. New tools placed there can be found without another PATH edit.
+
+After updating, open a new gtterm tab or run `gtterm reload`, then `command -v agent`. Both the release ZIP and GitHub Source code ZIP contain the full installer. Do not source your unrelated `~/.zshrc` to refresh PATH inside the isolated gtterm profile: it may load a different Powerlevel10k configuration. Existing personal PATH lines in `local.zsh` remain supported.

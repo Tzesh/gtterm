@@ -89,6 +89,7 @@ _gt_tools_path() {
   _gt_tools_arch || return
   [[ -d "$TERMINAL_PACK_DIR/tools/bin" ]] || return 0
   path=("$TERMINAL_PACK_DIR/tools/bin" ${path:#$TERMINAL_PACK_DIR/tools/bin})
+  (( ${path[(Ie)$HOME/.local/bin]} )) || path+=("$HOME/.local/bin")
   export PATH
   export _ZO_DATA_DIR="$TERMINAL_PACK_DIR/state/zoxide"
   (umask 077; mkdir -p "$_ZO_DATA_DIR") || return

@@ -1,5 +1,11 @@
 # Changelog
 
+## 3.0.1 — 2026-10-23
+
+- Recognize `~/.local/bin` automatically in gtterm profiles and helper-enabled shells, including reload; append only when missing and retain existing PATH order.
+- Keep bundled tool precedence and existing `local.zsh` PATH overrides; no CLI execution, installation or user dotfile edits.
+- Document GitHub Source code ZIP installation and how to refresh PATH without sourcing an unrelated Powerlevel10k configuration.
+
 ## 3.0.0 — 2026-10-23
 
 - 40 coordinated palettes and five prompt styles, persistent settings/menu and Work, Focus and Presentation presets.
