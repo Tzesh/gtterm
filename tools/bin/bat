@@ -1,0 +1,24 @@
+#!/bin/zsh -f
+# Only dispatch to the bundled binary for this process architecture.
+root=${0:A:h:h}
+tool=${0:t}
+case $tool in fzf|zoxide|rg|fd|bat|lazygit|jq|btm|fastfetch) ;; *) exit 127 ;; esac
+arch=$(/usr/bin/uname -m)
+[[ $arch == (arm64|x86_64) ]] || { print -u2 'Unsupported architecture.'; exit 126; }
+case $tool in
+  lazygit|jq|btm|fastfetch)
+    TERMINAL_PACK_DIR=${root:h}
+    source "$TERMINAL_PACK_DIR/i18n.zsh"
+    source "$TERMINAL_PACK_DIR/tools.zsh"
+    _gt_tool_os "$tool" || { _gt_msg tools_os "$tool" "$_GT_TOOL_MINIMUM" >&2; exit 126; } ;;
+esac
+binary="$root/$arch/$tool"
+[[ -x $binary && ! -L $binary ]] || { print -u2 "gtterm: missing tool $tool"; exit 127; }
+if /usr/bin/xattr -p com.apple.quarantine "$binary" >/dev/null 2>&1; then
+  TERMINAL_PACK_DIR=${root:h}
+  source "$TERMINAL_PACK_DIR/i18n.zsh"
+  _gt_msg tools_blocked "$tool" >&2
+  exit 126
+fi
+if [[ $tool == lazygit ]]; then export LG_CONFIG_FILE=${LG_CONFIG_FILE:-"$root/lazygit.yml"}; fi
+exec "$binary" "$@"

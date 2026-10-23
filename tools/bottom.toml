@@ -1,0 +1,3 @@
+# gtterm monitor supplies --read_only and a two-second refresh interval.
+# Keep user/global bottom configuration separate from this workspace view.
+[flags]

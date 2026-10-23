@@ -1,0 +1,43 @@
+{
+  "components": [
+    {
+      "class": "iTermStatusBarWorkingDirectoryComponent",
+      "configuration": {
+        "knobs": {
+          "base: priority": 10,
+          "maxwidth": 360
+        }
+      }
+    },
+    {
+      "class": "iTermStatusBarJobComponent",
+      "configuration": {
+        "knobs": {
+          "base: priority": 9,
+          "maxwidth": 180
+        }
+      }
+    },
+    {
+      "class": "iTermStatusBarSpringComponent",
+      "configuration": {
+        "knobs": {}
+      }
+    },
+    {
+      "class": "iTermStatusBarClockComponent",
+      "configuration": {
+        "knobs": {
+          "format": "HH:mm",
+          "base: priority": 8
+        }
+      }
+    }
+  ],
+  "advanced configuration": {
+    "algorithm": 0,
+    "remove empty components": true,
+    "draw separator between status bar and terminal": true,
+    "auto-rainbow style": 0
+  }
+}

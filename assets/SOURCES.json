@@ -1,0 +1,9 @@
+{
+  "author": "gtterm",
+  "license": "MIT",
+  "description": "Original static retrowave vector artwork and derived PNG; no external assets.",
+  "files": {
+    "retrowave.svg": "7bb6fe05f129b0f66954790580a43ac1974af91329b327e83e12ac8e26e4877d",
+    "retrowave.png": "e432b01bcc7b9290fcaff00a7db395332af55e34d3c5240753f051612e1ab1dc"
+  }
+}

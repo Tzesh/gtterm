@@ -5,10 +5,11 @@ root=${0:A:h}
 TERMINAL_PACK_DIR=$root
 source "$root/i18n.zsh"
 source "$root/themes.zsh"
+source "$root/chrome.zsh"
 [[ "$root" == "$HOME/.config/iterm-pack" ]] || { _gt_msg uninstall_location >&2; exit 1; }
 if [[ -r "$root/state/previous-default-profile" ]]; then
   current_default=$(command defaults read com.googlecode.iterm2 'Default Bookmark Guid' 2>/dev/null) || current_default=
-  if [[ -n ${GTTERM_THEME_GUIDS[(re)$current_default]} ]]; then
+  if [[ -n ${GTTERM_THEME_GUIDS[(re)$current_default]} || $current_default == A7D946E0-9042-59DF-8822-77333F391BA0 ]]; then
     previous_default=$(<"$root/state/previous-default-profile")
     if [[ $previous_default == __unset__ ]]; then
       command defaults delete com.googlecode.iterm2 'Default Bookmark Guid'
@@ -17,6 +18,7 @@ if [[ -r "$root/state/previous-default-profile" ]]; then
     fi
   fi
 fi
+_gt_tabs_restore "$root"
 rm -f -- "$HOME/Library/Application Support/iTerm2/DynamicProfiles/terminal-pack.json"
 if [[ -f "$HOME/.zshrc" ]]; then
   temporary=$(/usr/bin/mktemp "$root/zshrc.XXXXXX")

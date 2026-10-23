@@ -1,0 +1,55 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>gtterm3.0 · Native text effects</title><style>
+ @font-face{font-family:VT323;src:url('../fonts/VT323-Regular.ttf')}@font-face{font-family:Meslo;src:url('../fonts/MesloLGS%20NF%20Regular.ttf')}@font-face{font-family:MesloBold;src:url('../fonts/MesloLGS%20NF%20Bold.ttf')}
+ *{box-sizing:border-box}body{margin:0;background:#0c111b;color:#e6edf7;font:16px/1.65 -apple-system,BlinkMacSystemFont,sans-serif}main{max-width:1250px;margin:auto;padding:48px 30px}.eyebrow{color:#88c0d0;font-weight:700;letter-spacing:.13em;font-size:13px}h1{font-size:44px;line-height:1.15;margin:12px 0 20px}aside{border-left:3px solid #88c0d0;padding:12px 20px;background:#151d2b;max-width:1000px;color:#b8c7dc}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:22px;margin-top:32px}article{background:#151d2b;border:1px solid #28364a;border-radius:15px;overflow:hidden}header{display:flex;justify-content:space-between;padding:14px 20px}header span{font-size:12px;color:#a9bbd0}strong{font-size:20px}pre{margin:0;padding:25px 20px;background:var(--bg);color:var(--fg);font-size:19px;line-height:1.25;min-height:275px;overflow:auto}.cursor{display:inline-block;width:.52em;height:1em;vertical-align:text-bottom}article p{font-size:14px;margin:14px 20px;color:#a9bbd0}button{font-family:monospace;margin:0 20px 20px;padding:10px 12px;border:1px solid #3b526e;background:#1d2a3c;color:#e6edf7;border-radius:7px;cursor:pointer}a{color:#88c0d0}code,output{font-family:monospace}.note{color:#a9bbd0;font-size:14px;margin-top:28px}#selected{display:block;min-height:30px;margin:20px 0}.bar{display:flex;justify-content:space-between;align-items:center}.bar button{margin:0} @media(max-width:600px){main{padding:25px 15px}h1{font-size:32px}.grid{grid-template-columns:1fr}}
+ </style><main><div class="bar"><span class="eyebrow">GTTERM · 3.0.0</span><button id="language">Türkçe</button></div><h1 id="heading">One terminal. Different typography.</h1><aside id="intro">These previews show real bundled fonts and preset colors. iTerm applies native cursor blink/stretch; this page does not simulate it. These are not CRT shaders: no bloom, screen curvature or 3D effect. Background images/transparency remain a separate setting.</aside><div class="grid"><article><header><strong>off</strong><span>Meslo</span></header><pre style="--bg:#2e3440;--fg:#d8dee9;font-family:Meslo,monospace">$ gtterm effect off
+$ git status
+On branch main
+Changes ready for review
+
+$ agent --help
+Ask. Inspect. Build. Verify.
+
+$ <span class="cursor" style="background:#d8dee9"></span></pre><p>Normal theme</p><button data-mode="off">gtterm effect off</button></article><article><header><strong>retro</strong><span>VT323</span></header><pre style="--bg:#2e3440;--fg:#d8dee9;font-family:VT323,monospace">$ gtterm effect retro
+$ git status
+On branch main
+Changes ready for review
+
+$ agent --help
+Ask. Inspect. Build. Verify.
+
+$ <span class="cursor" style="background:#d8dee9"></span></pre><p>Pixel-style font / theme colors</p><button data-mode="retro">gtterm effect retro</button></article><article><header><strong>fallout</strong><span>VT323</span></header><pre style="--bg:#061009;--fg:#8aff80;font-family:VT323,monospace">$ gtterm effect fallout
+$ git status
+On branch main
+Changes ready for review
+
+$ agent --help
+Ask. Inspect. Build. Verify.
+
+$ <span class="cursor" style="background:#8aff80"></span></pre><p>Green phosphor palette</p><button data-mode="fallout">gtterm effect fallout</button></article><article><header><strong>amber</strong><span>VT323</span></header><pre style="--bg:#160e07;--fg:#ffc36a;font-family:VT323,monospace">$ gtterm effect amber
+$ git status
+On branch main
+Changes ready for review
+
+$ agent --help
+Ask. Inspect. Build. Verify.
+
+$ <span class="cursor" style="background:#ffc36a"></span></pre><p>Warm amber palette</p><button data-mode="amber">gtterm effect amber</button></article><article><header><strong>typewriter</strong><span>Courier</span></header><pre style="--bg:#1b1713;--fg:#e8d8b8;font-family:Courier,monospace">$ gtterm effect typewriter
+$ git status
+On branch main
+Changes ready for review
+
+$ agent --help
+Ask. Inspect. Build. Verify.
+
+$ <span class="cursor" style="background:#e8d8b8"></span></pre><p>Sepia / steady cursor</p><button data-mode="typewriter">gtterm effect typewriter</button></article><article><header><strong>neon</strong><span>Meslo Bold</span></header><pre style="--bg:#100c22;--fg:#d8ffff;font-family:MesloBold,monospace">$ gtterm effect neon
+$ git status
+On branch main
+Changes ready for review
+
+$ agent --help
+Ask. Inspect. Build. Verify.
+
+$ <span class="cursor" style="background:#ff68df"></span></pre><p>Cyan text / magenta cursor</p><button data-mode="neon">gtterm effect neon</button></article></div><output id="selected" aria-live="polite"></output><p class="note" id="note">Run commands in a local gtterm tab. If iTerm asks to allow profile changes, allow it and run gtterm effect apply. The preview uses browser font rendering; actual iTerm text may differ. ANSI colors and application truecolor output can retain their own colors.</p><a href="en/effects.md" id="manual">Read the effects manual</a></main><script>
+ document.querySelectorAll('[data-mode]').forEach(b=>b.onclick=async()=>{const text='gtterm effect '+b.dataset.mode;document.querySelector('#selected').textContent=text;try{await navigator.clipboard.writeText(text)}catch{}});
+ let tr=false;document.querySelector('#language').onclick=()=>{tr=!tr;document.documentElement.lang=tr?'tr':'en';document.querySelector('#language').textContent=tr?'English':'Türkçe';document.querySelector('#heading').textContent=tr?'Aynı terminal. Farklı yazı karakteri.':'One terminal. Different typography.';document.querySelector('#intro').textContent=tr?'Önizlemeler gerçek paket fontlarını ve görünüm renklerini kullanır. iTerm’in yerleşik imleç animasyonu bu sayfada taklit edilmez. Bunlar CRT shader’ı değildir: parlama, ekran eğriliği veya 3D yoktur. Arka plan resmi/saydamlığı ayrı ayardır.':'These previews show real bundled fonts and preset colors. iTerm applies native cursor blink/stretch; this page does not simulate it. These are not CRT shaders: no bloom, screen curvature or 3D effect. Background images/transparency remain a separate setting.';document.querySelector('#note').textContent=tr?'Komutları yerel gtterm sekmesinde çalıştır. iTerm profil değişimi izni sorarsa izin verip gtterm effect apply çalıştır. Tarayıcı font çizimi gerçek iTerm’den farklı olabilir. ANSI ve uygulamaların truecolor renkleri korunabilir.':'Run commands in a local gtterm tab. If iTerm asks to allow profile changes, allow it and run gtterm effect apply. The preview uses browser font rendering; actual iTerm text may differ. ANSI colors and application truecolor output can retain their own colors.';document.querySelector('#manual').textContent=tr?'Efekt kılavuzunu oku':'Read the effects manual';document.querySelector('#manual').href=tr?'tr/effects.md':'en/effects.md';};
+ </script></html>

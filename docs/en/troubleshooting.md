@@ -23,7 +23,7 @@ Installation now saves **gtterm - Nord** as the default. To choose a different p
 
 ## Theme changes disappear in a new window
 
-`gtterm theme` is a session action. New windows start with the selected iTerm profile's theme. Choose the corresponding default profile if you want a particular startup theme. gtterm does not modify macOS light/dark appearance.
+`gtterm theme <name>` now saves the choice. `gtterm theme preview <name>` is temporary. Check `gtterm config show`, then open a new full gtterm profile. A saved theme overrides the named profile’s startup palette; otherwise the profile supplies its initial colors. Other open shells retain their own view until reloaded. macOS appearance is unchanged.
 
 ## Icons are squares or the prompt looks misaligned
 
@@ -61,7 +61,7 @@ Language is stored per Mac. `gtterm lang tr` updates the current shell and futur
 
 ## Installation already exists
 
-This is a protective refusal, not a partial upgrade. Follow the private backup/uninstall/reinstall steps in the guide. Do not delete an existing installed directory without saving its `local.zsh` and `state/` if you need those values.
+Older installers refused existing installations. Extract the new package into a separate folder and run its `zsh install.zsh`; it now upgrades in place with a private backup. Do not delete the existing runtime. See the [upgrade guide](guide.md).
 
 ## Where to find details
 
@@ -72,3 +72,20 @@ This is a protective refusal, not a partial upgrade. Follow the private backup/u
 macOS can block the unnotarized gitstatusd executable in a browser-downloaded archive. Starting with 2.1.1, gtterm uses Powerlevel10k’s Zsh `vcs_info` backend and never starts gitstatusd. Git branch/status information remains available; large repositories may update more slowly. No administrator access or Gatekeeper changes are needed.
 
 For an existing 2.1.0 installation, add `typeset -g POWERLEVEL9K_DISABLE_GITSTATUS=true` to `~/.config/iterm-pack/p10k.zsh`, then open a new gtterm session. `gtterm reload` reloads helpers only, so it does not apply this prompt change.
+
+
+## Tools and workspace presets
+
+See [tools, keyboard shortcuts, presets and the single-command update](tools.md). Use `gtterm docs tools` to read this documentation locally.
+
+
+## 3.0 CLI workspace
+
+See [Control+Esc hotkey, vivid palettes, optional effects and CLI compatibility](cli.md) and [safe reusable snippets](snippets.md). Commands: `gtterm hotkey`, `gtterm effect`, `gtterm cli`, `gtterm snippet`.
+
+
+[Native text effects and retro fonts](effects.md) are separate from background image/transparency settings.
+
+## Text remains jagged after an effect
+
+See [normal text restoration and session font checks](effects.md#returning-to-normal-text). The 3.0.0 installer includes explicit smoothing and cursor restoration.

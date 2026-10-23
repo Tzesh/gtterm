@@ -1,0 +1,1 @@
+Seçili kodun girdilerini, çıktılarını, önemli kararlarını ve hata durumlarını somut dosya referanslarıyla açıkla.

@@ -1,0 +1,1 @@
+Kodu değiştirmeden önce bu hatayı araştır. Kanıt topla, nedeni belirle ve gerileme kontrolüyle birlikte odaklı bir düzeltme öner.

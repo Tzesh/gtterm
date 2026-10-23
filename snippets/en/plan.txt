@@ -1,0 +1,1 @@
+Inspect the relevant code and propose the smallest complete implementation plan. State assumptions and validation steps before editing.

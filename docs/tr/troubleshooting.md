@@ -23,7 +23,7 @@ Kurulum artık **gtterm - Nord** profilini varsayılan kaydeder. Sonradan farkl�
 
 ## Tema yeni pencerede geri dönüyor
 
-`gtterm theme` oturumluk bir işlemdir. Yeni pencere seçilen iTerm profilinin temasıyla başlar. Belirli bir başlangıç teması istiyorsanız ilgili profili varsayılan yapın. macOS açık/koyu görünümü değiştirilmez.
+`gtterm theme <ad>` artık seçimi kaydeder; `gtterm theme preview <ad>` geçicidir. `gtterm config show` ile kaydı kontrol edip yeni tam gtterm profili açın. Kayıtlı tema varsa profilin başlangıç paletinin önüne geçer; yoksa açılan profilin rengi kullanılır. Diğer açık terminaller yeniden yüklenene kadar kendi görünümünü korur. macOS görünümü değiştirilmez.
 
 ## İkonlar kare veya prompt kaymış
 
@@ -61,7 +61,7 @@ Dil tercihi bu Mac'te tutulur. `gtterm lang tr` mevcut terminali ve yeni oturuml
 
 ## Kurulum zaten mevcut uyarısı
 
-Bu koruyucu bir reddetmedir, yarım kalmış bir yükseltme değildir. Kılavuzdaki özel yedek/kaldır/yeniden kur adımlarını izleyin. `local.zsh` ve `state/` gerekiyorsa yedeklemeden kurulum klasörünü silmeyin.
+Eski kurucular mevcut kurulumu reddeder. Yeni paketi ayrı klasöre açıp onun `zsh install.zsh` komutunu çalıştırın; artık özel yedek alarak yerinde günceller. Mevcut çalışma klasörünü silmeyin. [Güncelleme kılavuzuna](guide.md) bakın.
 
 ## Ek bilgi
 
@@ -72,3 +72,20 @@ Bu koruyucu bir reddetmedir, yarım kalmış bir yükseltme değildir. Kılavuzd
 macOS, tarayıcıdan indirilmiş arşivdeki noter onayı olmayan gitstatusd programını engelleyebilir. gtterm 2.1.1 itibarıyla Powerlevel10k’ın Zsh `vcs_info` altyapısını kullanır; gitstatusd başlatılmaz. Git dalı/durum bilgisi korunur; büyük depolarda güncellenmesi biraz daha yavaş olabilir. Yönetici yetkisi veya Gatekeeper değişikliği gerekmez.
 
 Mevcut 2.1.0 kurulumunda `~/.config/iterm-pack/p10k.zsh` dosyasına `typeset -g POWERLEVEL9K_DISABLE_GITSTATUS=true` ekleyip yeni bir gtterm oturumu açın. `gtterm reload` yalnızca yardımcı komutları yükler; bu prompt değişikliği için yeni oturum gerekir.
+
+
+## Araçlar ve hazır görünümler
+
+[Araçlar, kısayollar, hazır görünümler ve tek komutla güncelleme](tools.md). Yerel belge için `gtterm docs tools` kullan.
+
+
+## 3.0 CLI çalışma alanı
+
+[Control+Esc hotkey, canlı paletler, isteğe bağlı efektler ve CLI uyumluluğu](cli.md), [güvenli tekrar kullanılabilir parçalar](snippets.md). Komutlar: `gtterm hotkey`, `gtterm effect`, `gtterm cli`, `gtterm snippet`.
+
+
+[Yerleşik yazı efektleri ve retro fontlar](effects.md), arka plan resmi/saydamlık ayarlarından bağımsızdır.
+
+## Efekt sonrası yazı pürüzlü kalıyor
+
+[Normal yazı görünümüne dönüş ve sekme kontrolü](effects.md#normal-yazı-görünümüne-dönüş) bölümüne bakın. 3.0.0 kurucusu yazı yumuşatma ve imleç ayarlarını açıkça geri yükler.

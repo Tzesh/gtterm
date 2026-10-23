@@ -2,6 +2,12 @@
 typeset -g TERMINAL_PACK_DIR=${TERMINAL_PACK_DIR:-$HOME/.config/iterm-pack}
 source "$TERMINAL_PACK_DIR/i18n.zsh" || return
 source "$TERMINAL_PACK_DIR/themes.zsh" || return
+source "$TERMINAL_PACK_DIR/settings.zsh" || return
+source "$TERMINAL_PACK_DIR/tools.zsh" || return
+_gt_tools_path || return
+source "$TERMINAL_PACK_DIR/snippets.zsh" || return
+source "$TERMINAL_PACK_DIR/chrome.zsh" || return
+source "$TERMINAL_PACK_DIR/mac.zsh" || return
 
 # Remove only the former package entrypoints when reloading an existing shell.
 for _gt_legacy_name in pon poff jboss jboss-ports proxy-on proxy-off proxy-auto proxy-status chrome-local ports jvms pack-theme; do

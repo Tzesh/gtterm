@@ -1,0 +1,1 @@
+Mevcut değişiklikleri incele. Doğruluk, güvenlik ve gerilemelere öncelik ver. Uygulanabilir bulgular için dosya yolu ve satır belirt. Dosyaları değiştirme.

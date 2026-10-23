@@ -1,12 +1,12 @@
-gtterm 2.1
+gtterm 3.0.0
 
 Start with README.md.
+Install or update: zsh install.zsh --trust-tools
 English: docs/en/guide.md
 Türkçe: docs/tr/guide.md
 
 After installation:
-  gtterm help
   gtterm doctor
-  gtterm docs
+  gtterm tools verify
+  gtterm help
   gtterm lang tr
-  gtterm lang en

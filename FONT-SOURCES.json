@@ -16,6 +16,14 @@
     {
       "name": "MesloLGS NF Regular.ttf",
       "sha256": "d97946186e97f8d7c0139e8983abf40a1d2d086924f2c5dbf1c29bd8f2c6e57d"
+    },
+    {
+      "name": "VT323-Regular.ttf",
+      "sha256": "cf4de751ada78ceac033dbe16a687742939995b77bc2a052ae17a4957958594d",
+      "source": "https://raw.githubusercontent.com/google/fonts/2da41909d08a7bfeab32cfc163edb7be0c34395d/ofl/vt323/VT323-Regular.ttf",
+      "source_commit": "2da41909d08a7bfeab32cfc163edb7be0c34395d",
+      "license": "fonts/VT323-OFL.txt",
+      "license_sha256": "27d9af34210253e7ca1251fbace86c6f65b40031d6ce1a75493a1b2093631298"
     }
   ]
 }

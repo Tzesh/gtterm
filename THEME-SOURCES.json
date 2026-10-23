@@ -57,5 +57,72 @@
       "LICENSE": "2373168614b527494dff99eb393024608216db79f687d58bad420f6c1e0ad192",
       "CREDITS.md": "40a909ff0d6f77570c077f8f5c3099517641983f2f036d2921deb90c2d2eb526"
     }
+  },
+  {
+    "repository": "https://github.com/mbadolato/iTerm2-Color-Schemes",
+    "commit": "74e6e762b83c9ede7bb5ec9dce855cc8aed54f3b",
+    "files": [
+      "schemes/Kanagawa Wave.itermcolors",
+      "schemes/Kanagawa Dragon.itermcolors",
+      "schemes/Kanagawa Lotus.itermcolors",
+      "schemes/Everforest Dark Soft.itermcolors",
+      "schemes/Everforest Light Soft.itermcolors",
+      "schemes/Nightfox.itermcolors",
+      "schemes/Carbonfox.itermcolors",
+      "schemes/Dawnfox.itermcolors",
+      "schemes/Ayu Mirage.itermcolors",
+      "schemes/Ayu Light.itermcolors",
+      "schemes/Iceberg Dark.itermcolors",
+      "schemes/Iceberg Light.itermcolors",
+      "schemes/TokyoNight Day.itermcolors",
+      "schemes/GitHub Light Default.itermcolors",
+      "schemes/Night Owl.itermcolors",
+      "schemes/Poimandres.itermcolors",
+      "schemes/Material Ocean.itermcolors",
+      "schemes/Oxocarbon.itermcolors"
+    ],
+    "sha256": {
+      "schemes/Kanagawa Wave.itermcolors": "ae0d5b8cea0eaad07ff43aa2ab2fc644d736078abd27a93d886b49a4633e4006",
+      "schemes/Kanagawa Dragon.itermcolors": "37e75858d78d5dc0372114b99a289dbddbf3bf0793ee49bacfeceb3af705043f",
+      "schemes/Kanagawa Lotus.itermcolors": "bc9328d2eccbd7f8439c3f2ca2882c0be1452c903d26e0b2df4415f907ed6a07",
+      "schemes/Everforest Dark Soft.itermcolors": "9d1aac06ba522a66d0a3d83f9e16a7b2462e9232d334d38da263a5426c7d97c4",
+      "schemes/Everforest Light Soft.itermcolors": "d518738f3834d364ff625596ea7cfce0a4f1e8f2f0055f8c3d67f6426bd856ab",
+      "schemes/Nightfox.itermcolors": "bfd1e5204713198adb00480c0c7dbde90ad97eb06ac30263eea35d565f20c0b9",
+      "schemes/Carbonfox.itermcolors": "299095053b06081501ddd5ca1bcadfb0599de543b085f835b45b6059d1012988",
+      "schemes/Dawnfox.itermcolors": "43b13e19bd6764f9e8c92b55c08822779103761a369269df3ad7d556ce114ed8",
+      "schemes/Ayu Mirage.itermcolors": "cabcc511d97a96178183e49c3e3f2b1843b0c28e9a7529be55bcedd4c99643fd",
+      "schemes/Ayu Light.itermcolors": "033705cf58e7b53f4146f6a9ca152cc66878a1da282c4ba3021fe6582aaacc77",
+      "schemes/Iceberg Dark.itermcolors": "e903bf658962c874df25bb72e34761f51d28bf7b31c25e4f23044e59cbda83ea",
+      "schemes/Iceberg Light.itermcolors": "740158b714df8e22157e29de3c6d37cec31e665a61f98277863b767cecc5098b",
+      "schemes/TokyoNight Day.itermcolors": "ba5d1e425f8412c4de15d3c3e3839112643b58713c6ce222be5c91a8dab9de31",
+      "schemes/GitHub Light Default.itermcolors": "c7cf3e2708a9526ada2474a4b4ba08332c2cfdc2e75e33baa535cde5d970f0b0",
+      "schemes/Night Owl.itermcolors": "b07fb400acf867e2d11899e2c3ee4195697ecea6eb8561e539c9911ab040061c",
+      "schemes/Poimandres.itermcolors": "0f9cf925318d893fd2906e04fb666d644ccb7a2d0b635882af623da1e5d59ffc",
+      "schemes/Material Ocean.itermcolors": "20df47bfed16f65ad09f494d6160cdea948fd1fdfe637f5a62966acbd6854809",
+      "schemes/Oxocarbon.itermcolors": "560544836944807632834e50f456f71b76990f69b993c3d851526c06958b112c"
+    }
+  },
+  {
+    "author": "gtterm",
+    "license": "MIT",
+    "description": "Original vivid gtterm palettes; independent of similarly named upstream themes.",
+    "files": [
+      {
+        "file": "themes/synthwave.itermcolors",
+        "sha256": "7384f50016e0b9ee8905d0572c59ae890ae960b5d733a43d81555a4393f46024"
+      },
+      {
+        "file": "themes/cyberpunk.itermcolors",
+        "sha256": "46b62dfe79227f5d284a0028188eeb4c3020ec8f0a2de45a6fb2155e080afc1f"
+      },
+      {
+        "file": "themes/aurora.itermcolors",
+        "sha256": "557d3f8988018ddd3eee81733f4c1960febb3db24e066e9fc3c708d97ab0ad3b"
+      },
+      {
+        "file": "themes/laserwave.itermcolors",
+        "sha256": "48b7a73f4734c35e7ad95813b3406af238d55f16fca438b1545edcdac07b5887"
+      }
+    ]
   }
 ]

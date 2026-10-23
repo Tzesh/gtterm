@@ -1,0 +1,1 @@
+Summarize the current task for another session: objective, constraints, changed files, completed validation and the exact next step. Exclude secrets.

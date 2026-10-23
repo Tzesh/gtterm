@@ -4,7 +4,7 @@
 
 ## Paketin içeriği
 
-Tam iTerm profilleri Oh My Zsh, Powerlevel10k, MesloLGS NF, zsh-autosuggestions, zsh-autocomplete, zasync ve komut renklendirmesini bir araya getirir. 18 profil bulunur: örneğin **gtterm - Mocha** koyu/pastel, **gtterm - Nord** soğuk gri/mavi, **gtterm - Latte** açık temadır. Öneriler, vurgu renkleri ve prompt aynı paleti kullanır. Önceki komutların prompt'u kısalarak çıktılara yer açar.
+Tam iTerm profilleri Oh My Zsh, Powerlevel10k, MesloLGS NF, zsh-autosuggestions, zsh-autocomplete, zasync ve komut renklendirmesini bir araya getirir. 40 profil bulunur: örneğin **gtterm - Mocha** koyu/pastel, **gtterm - Nord** soğuk gri/mavi, **gtterm - Latte** açık temadır. Öneriler, vurgu renkleri ve prompt aynı paleti kullanır. Önceki komutların prompt'u kısalarak çıktılara yer açar.
 
 Yardımcı komutlar normal Zsh oturumlarında da kullanılabilir. Ancak yalnızca yardımcı komutları yüklemek, normal profile tüm görünümü ve eklentileri eklemez. `gtterm doctor` hangi durumda olduğunuzu gösterir.
 
@@ -12,7 +12,7 @@ Yardımcı komutlar normal Zsh oturumlarında da kullanılabilir. Ancak yalnızc
 
 ZIP'i açın. `zsh /gercek/yol/gtterm/install.zsh` çalıştırın veya Terminal'e `zsh ` yazıp kurulum dosyasını pencereye sürükleyin. Örnekteki yol yerine gerçek dosyanın yolunu kullanın.
 
-Türkçe kurulum için komutun sonuna `--lang tr` ekleyin. Varsayılan İngilizcedir. Kurucu macOS/Zsh sürümünü kontrol eder, paket dosyalarını kopyalar, eksik kullanıcı fontlarını ekler ve 18 dinamik iTerm profili kaydeder. Var olan `.zshrc` dosyasını kurulum klasörüne yedekler; mevcut satırları değiştirmeden işaretli bir yardımcı komut bloğu ekler.
+Türkçe kurulum için komutun sonuna `--lang tr` ekleyin. Varsayılan İngilizcedir. Kurucu macOS/Zsh sürümünü kontrol eder, paket dosyalarını kopyalar, eksik kullanıcı fontlarını ekler ve 40 dinamik iTerm profili kaydeder. Var olan `.zshrc` dosyasını kurulum klasörüne yedekler; mevcut satırları değiştirmeden işaretli bir yardımcı komut bloğu ekler.
 
 Kurucu **gtterm - Nord** profilini varsayılan kaydeder; önceki varsayılanı kaldırmada geri yüklemek üzere saklar. Hemen **iTerm → Profiles → gtterm - Nord** açabilir veya kaydedilen varsayılanın geçerli olması için uygun olduğunda iTerm’i yeniden açabilirsiniz. Varsayılanı değiştirmek açık oturumları dönüştürmez. gtterm iTerm'i kapatmaz veya çalışan işlerinizi kesmez.
 
@@ -71,7 +71,7 @@ Bu sürüm proxy adresinde kullanıcı/parola, SOCKS URL'si ve IPv6 proxy sunucu
 - Ctrl+R geçmişte arar.
 - Cmd+D / Cmd+Shift+D iTerm bölmesini dikey/yatay böler.
 - Cmd+Option+ok bölmeler arasında geçer; Cmd+Shift+Enter seçili bölmeyi büyütür/geri getirir.
-- `gtterm theme <ad>` yalnızca mevcut oturumu değiştirir. Sonraki oturumun teması açılan iTerm profilinden gelir.
+- `gtterm theme <ad>` temayı mevcut ve yeni oturumlar için kaydeder. `gtterm theme preview <ad>` yalnızca mevcut oturumda dener.
 
 Prompt için kurulum klasöründeki `p10k.zsh`, profil görünümü için dinamik profil JSON'u düzenlenebilir. Burada `p10k configure` kullanmayın: sihirbaz paketin dosyası yerine normal varsayılan dotfile'lara yazabilir.
 
@@ -94,25 +94,19 @@ Temiz ZIP'i kopyalayıp kurun. İki işlemci mimarisinin gitstatus dosyaları, f
 
 ## Mevcut kurulumu yükseltme veya geri dönme
 
-Kurucu mevcut kurulumun üzerine yazmayı reddeder. Dosyaları değiştirmeden önce gtterm oturumlarını kapatın; çalışan geliştirme servislerini kendi normal yönteminizle yönetin.
-
-1. `~/.config/iterm-pack` klasörünün tamamını başka bir özel klasöre yedekleyin.
-2. Yeni sürümü doğrulayana kadar yedeği tutun. İçinde kişisel ayarlar bulunduğundan bu yedeği dağıtmayın.
-3. `zsh ~/.config/iterm-pack/uninstall.zsh` çalıştırın.
-4. Yeni paketin `install.zsh` dosyasını çalıştırın.
-5. Tercihleri korumak istiyorsanız yedekteki `state/` ve `local.zsh` dosyalarını yeni kuruluma kopyalayın. Yeni program dosyalarını eskileriyle değiştirmeyin.
-6. Yeni bir gtterm profili açıp `gtterm doctor` çalıştırın.
-
-Geri dönmek için yeni sürümü kaldırıp yedek çalışma klasörünü geri yükleyin; eski sürümün yönergeleriyle yardımcı komut bloğunu ve profilleri yeniden kaydedin. Yedek, kendiliğinden çalışan bir geri alma komutu değildir. `original.zshrc` başvuru amaçlı ilk yedektir; kaldırıcı sonradan eklediğiniz satırları korumak için yalnızca işaretli bloğu kaldırır.
-
-
-Aynı çalışma yoluna geri yüklenen yedeği yeniden kaydetmek için yedekteki `profile.json` dosyasını `~/Library/Application Support/iTerm2/DynamicProfiles/terminal-pack.json` konumuna kopyalayın. Aşağıdaki korumalı satır yoksa `~/.zshrc` dosyasına ekleyin:
+Yeni ZIP’i ayrı klasöre açın. İlk kurulumda da güncellemede de aynı komutu çalıştırın:
 
 ```sh
-[[ ! -r "$HOME/.config/iterm-pack/devtools.zsh" ]] || source "$HOME/.config/iterm-pack/devtools.zsh"
+zsh install.zsh
 ```
 
-Ardından yeni profil açın. Eski sürümün profil adı farklıysa o adı kullanın.
+Mevcut kurulum otomatik bulunup güncellenir. Önce kaldırmayın. `state/` (dil, proxy ve ilk varsayılan profil kaydı), `local.zsh`, `custom/`, orijinal shell yedeği, font kayıtları, mevcut `.zshrc` ve seçili iTerm varsayılanı korunur. Kaydedilen dili özellikle değiştirmek isterseniz `--lang tr` veya `--lang en` ekleyin.
+
+Yeni dosyalar geçici klasörde hazırlanır. `~/.config/iterm-pack-backups/` altında önceki çalışma klasörü ve dinamik profil özel yedek olarak saklanır; tam yolu tamamlanma mesajında gösterilir. Yedek kişisel ayar içerir: paylaşmayın. Çalışma klasörü/profil geçişi başarısız olursa eski kurulum otomatik geri yüklenir. Başarılı güncellemenin yedeği siz silene kadar tutulur; kaldırıcı yedekleri silmez.
+
+Yeni bir gtterm profili açıp `gtterm version` ve `gtterm doctor` çalıştırın. Açık oturumlar yeni oturum açılana kadar bellekteki eski kodu kullanır. Eşzamanlı güncelleme çalıştırmayın. Paket program dosyaları ve gtterm profillerinin görünümü yenilenir; kişisel değişiklikleri `local.zsh` içinde tutun.
+
+Başarılı güncellemeden sonra elle geri dönmek için gtterm oturumlarından çıkın, yeni çalışma klasörünü ayrı tutun, yedekteki `runtime` klasörünü `~/.config/iterm-pack` konumuna koyun; varsa `dynamic-profile.json` dosyasını `~/Library/Application Support/iTerm2/DynamicProfiles/terminal-pack.json` konumuna geri kopyalayın. Güncelleme shell bloğunu veya varsayılan profil tercihini değiştirmez.
 
 ## Kaldırma
 
@@ -125,4 +119,25 @@ zsh ~/.config/iterm-pack/uninstall.zsh
 Kaldırıcı dinamik gtterm profillerini, yardımcı komut bloğunu ve çalışma klasörünü kaldırır. Diğer `.zshrc` satırları, ortak Meslo fontları ve Chrome geliştirme verileri korunur. Bu Mac'te önceki varsayılan profil kaydedilmişse ve mevcut varsayılan hâlâ gtterm ise o tercih geri yüklenir. Açık terminaller kapanana kadar yüklenmiş fonksiyonları tutar. Çalışma klasöründeki yerel tercihler silinir; gerekiyorsa önce yedekleyin.
 
 
-[18 temanın tamamı ve örnekler](themes.md).
+[40 temanın tamamı ve örnekler](themes.md).
+
+
+## Araçlar ve hazır görünümler
+
+[Araçlar, kısayollar, hazır görünümler ve tek komutla güncelleme](tools.md). Yerel belge için `gtterm docs tools` kullan.
+
+
+## 3.0 CLI çalışma alanı
+
+[Control+Esc hotkey, canlı paletler, isteğe bağlı efektler ve CLI uyumluluğu](cli.md), [güvenli tekrar kullanılabilir parçalar](snippets.md). Komutlar: `gtterm hotkey`, `gtterm effect`, `gtterm cli`, `gtterm snippet`.
+
+
+[Yerleşik durum çubuğu, sekme başlıkları, retrowave ve komut paleti](visual.md).
+
+
+## Mac araçları ve kaynak izleyici
+
+[Mac komut kılavuzu](mac.md): `gtterm monitor`, `gtterm sysinfo`, `gtterm finder`, `gtterm preview`, `gtterm copy-path`, `gtterm copy`, `gtterm disk`, `gtterm awake` ve `gtterm background`.
+
+
+[Yerleşik yazı efektleri ve retro fontlar](effects.md), arka plan resmi/saydamlık ayarlarından bağımsızdır.

@@ -1,56 +1,88 @@
 # gtterm
 
-A portable iTerm2 + Zsh workspace for macOS, with a Powerlevel10k prompt, three coordinated themes, inline suggestions, completion menus, proxy controls and Java/JBoss tools. No sudo or Homebrew required.
+A portable iTerm2 + Zsh workspace for macOS: 40 coordinated themes, five prompt styles, native retro text effects and nine bundled command-line tools. No sudo or Homebrew required.
 
-**English is the default.** Run `gtterm lang tr` for Turkish; command names stay in English. Only `gtterm` is exposed; the former short commands have been removed.
+English is the default. Use `gtterm lang tr` for Turkish; command names stay in English.
 
-## Start
+## Install or update
 
-1. Extract `gtterm-macos.zip`.
-2. In Terminal, type `zsh `, drag `install.zsh` into the window, then press Enter. For Turkish installation messages, add ` --lang tr` before pressing Enter.
-3. Nord is selected as the default iTerm profile. Open **iTerm → Profiles → gtterm - Nord** immediately, or reopen iTerm when safe. Mocha and Latte are also available.
-4. Run:
+Install iTerm2 separately if needed; gtterm includes Oh My Zsh, Powerlevel10k, completion/suggestion plugins, fonts and tools, but does not install the iTerm2 application.
+
+Download and extract **gtterm-macos.zip** from [Releases](https://github.com/Tzesh/gtterm/releases/latest). From the extracted `gtterm` folder, use the same command for a first install or an update:
+
+```sh
+zsh install.zsh --trust-tools
+```
+
+Add `--lang tr` for Turkish setup. Installation makes no downloads and requests no administrator password. `--trust-tools` verifies the bundled SHA256 manifest and removes quarantine only from the bundled launchers and the current CPU's tool executables. It does not change Gatekeeper or bypass company policies. Omit the flag to preserve quarantine; blocked tool integrations remain disabled. See [tools and updates](docs/en/tools.md).
+
+Open **iTerm → Profiles → gtterm - Nord**, then run:
 
 ```sh
 gtterm doctor
+gtterm tools verify
 gtterm help
-gtterm docs
 ```
 
-The installer preserves your existing `.zshrc` lines, adds a marked helper block and sets **gtterm - Nord** as the saved default iTerm profile. The previous default is saved for removal. Running iTerm sessions are not restarted; reopen iTerm when safe if it still uses its cached old default.
+A first install selects Nord as the saved iTerm default. Updates preserve your selected default, saved settings, proxy, language, history, `local.zsh` and directory database, with a private rollback backup. Your existing `.zshrc` lines are preserved; gtterm adds a marked helper block. Do not uninstall before updating. After an update, open a new gtterm tab to load the full workspace; `gtterm reload` refreshes helpers in an existing shell.
 
-## Everyday commands
+## Appearance
 
 ```sh
-gtterm theme mocha
-gtterm proxy on 127.0.0.1:8080   # Replace with your proxy address.
-gtterm proxy auto on
-gtterm ports 8080
-gtterm ports java
-gtterm java
-gtterm chrome                   # Opens http://jboss.local mapped to 127.0.0.1.
-gtterm lang tr                  # Optional; gtterm lang en switches back.
+gtterm config                       # Settings menu
+gtterm theme tokyo-night
+gtterm style rounded
+gtterm preset work                  # Also focus or presentation
+gtterm effect fallout               # Also retro, amber, typewriter or neon
+gtterm effect off                   # Restore normal text rendering
+gtterm background retrowave         # Independent of text effects
+gtterm statusbar dashboard
+gtterm tabs smart
+gtterm hotkey on                    # Control+Esc: top dropdown terminal
 ```
 
-The proxy endpoint above is an example. Ports are read-only diagnostics. Chrome does not start JBoss; a ports-free HTTP URL requires a server on port 80.
+Nord, rounded prompt, normal Meslo typography and no background/text effect are the initial defaults. Appearance choices persist across updates. `effect off` restores theme colors, Meslo, text smoothing and the saved cursor shape/size/spacing; it leaves your background selection intact. Fallout and amber share VT323 and differ in color. These are native iTerm font/color/cursor treatments; CRT bloom, screen curvature and 3D shaders are not included. See [effects](docs/en/effects.md).
+
+## Everyday tools
+
+Bundled for Apple Silicon and Intel: **fzf, zoxide, rg, fd, bat, lazygit, jq, bottom and Fastfetch**.
+
+```sh
+gtterm jump backend                 # Jump to a previously visited directory
+gtterm monitor tree                 # Read-only CPU/RAM/process monitor
+gtterm sysinfo                      # Compact system summary; macOS 26+
+gtterm snippet pick                 # Reusable command/prompt snippets
+gtterm cli                          # Detect installed AI CLIs
+gtterm finder                       # Reveal current directory
+gtterm copy-path
+gtterm proxy on 127.0.0.1:8080       # Example; supply your own proxy
+gtterm proxy auto on
+gtterm chrome                       # jboss.local -> 127.0.0.1, HTTP port 80
+```
+
+Ctrl+R searches history; Ctrl+T finds files with previews; Option+C selects a directory when Option sends Esc+. Normal Tab completion and inline suggestions remain available. AI readiness checks do not install or authenticate Cursor, Codex, Copilot or Claude Code. Use a separate tab for helpers while an interactive CLI owns the input.
 
 ## Documentation
 
 | English | Türkçe |
 |---|---|
 | [Setup and daily workflow](docs/en/guide.md) | [Kurulum ve günlük kullanım](docs/tr/guide.md) |
-| [Complete command reference](docs/en/commands.md) | [Tüm komutlar](docs/tr/commands.md) |
+| [Commands](docs/en/commands.md) | [Komutlar](docs/tr/commands.md) |
+| [Themes and settings](docs/en/themes.md) | [Temalar ve ayarlar](docs/tr/themes.md) |
+| [Text effects](docs/en/effects.md) | [Yazı efektleri](docs/tr/effects.md) |
+| [Background, tabs and status](docs/en/visual.md) | [Arka plan, sekmeler ve durum](docs/tr/visual.md) |
+| [Tools and updates](docs/en/tools.md) | [Araçlar ve güncelleme](docs/tr/tools.md) |
+| [Mac helpers](docs/en/mac.md) | [Mac yardımcıları](docs/tr/mac.md) |
 | [Troubleshooting](docs/en/troubleshooting.md) | [Sorun giderme](docs/tr/troubleshooting.md) |
 
-Run `gtterm docs guide`, `gtterm docs commands` or `gtterm docs troubleshooting` to read these inside your terminal. Press **q** to close the pager.
+Use `gtterm docs <topic>` inside the terminal; **q** closes the pager. [Theme gallery](docs/theme-gallery.html) · [Effect gallery](docs/effect-gallery.html).
 
 ## Compatibility and portability
 
-- macOS with Zsh 5.8+; iTerm2 for the full appearance. Existing helpers also load in normal Zsh terminals.
-- Intel and Apple Silicon gitstatus binaries are bundled. This package has been exercised on Apple Silicon; an Intel machine has not been tested.
-- No downloads during installation/startup. JDK and Chrome are optional, already-installed applications used by the corresponding helpers.
-- Installation remains at `~/.config/iterm-pack` to preserve existing gtterm/Terminal Pack setups and open shells. Existing profile GUIDs and the `terminal-pack.json` filename are retained.
-- Local proxy settings, language preference, history, `local.zsh`, original shell backups and Chrome profile data are excluded from the portable ZIP.
-- Bundled upstream versions are pinned in `SOURCES.json`, `THEME-SOURCES.json`, `FONT-SOURCES.json` and `GITSTATUS-SOURCES.json`. Each component retains its license. Automatic Oh My Zsh updates are disabled for the offline bundle.
+- macOS with Zsh 5.8+ and iTerm2 for the full workspace. Tool minimums vary: base tools/bottom macOS 11+, lazygit 12+, jq 14+, Fastfetch 26+. macOS 26/27 meet these requirements.
+- Apple Silicon tools have been exercised locally; Intel binaries are bundled and inspected, without an Intel runtime test.
+- Runtime stays at `~/.config/iterm-pack` for upgrades; existing profile identifiers and `terminal-pack.json` are retained.
+- Private settings, proxy endpoints, history, local overrides, backups and Chrome data are excluded from release assets.
+- Pinned upstream sources and licenses are included in the `*-SOURCES.json` manifests and component folders. Automatic Oh My Zsh updates are disabled. Git status uses Zsh's backend without starting gitstatusd.
 
-See [CHANGELOG.md](CHANGELOG.md) and [VERIFICATION.txt](VERIFICATION.txt) for this release.
+See [CHANGELOG.md](CHANGELOG.md) and [VERIFICATION.txt](VERIFICATION.txt).

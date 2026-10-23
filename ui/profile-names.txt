@@ -1,0 +1,41 @@
+gtterm - Mocha
+gtterm - Nord
+gtterm - Latte
+gtterm - Catppuccin Frappe
+gtterm - Catppuccin Macchiato
+gtterm - Dracula
+gtterm - Tokyo Night
+gtterm - Tokyo Night Storm
+gtterm - Gruvbox Dark
+gtterm - Gruvbox Light
+gtterm - Rose Pine
+gtterm - Rose Pine Moon
+gtterm - Rose Pine Dawn
+gtterm - Solarized Dark
+gtterm - Solarized Light
+gtterm - One Dark
+gtterm - GitHub Dark
+gtterm - Monokai
+gtterm - Kanagawa Wave
+gtterm - Kanagawa Dragon
+gtterm - Kanagawa Lotus
+gtterm - Everforest Dark Soft
+gtterm - Everforest Light Soft
+gtterm - Nightfox
+gtterm - Carbonfox
+gtterm - Dawnfox
+gtterm - Ayu Mirage
+gtterm - Ayu Light
+gtterm - Iceberg Dark
+gtterm - Iceberg Light
+gtterm - Tokyo Night Day
+gtterm - GitHub Light Default
+gtterm - Night Owl
+gtterm - Poimandres
+gtterm - Material Ocean
+gtterm - Oxocarbon
+gtterm - Synthwave
+gtterm - Cyberpunk
+gtterm - Aurora
+gtterm - Laserwave
+gtterm - Hotkey

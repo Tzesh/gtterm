@@ -1,0 +1,1 @@
+İlgili kodu incele ve ihtiyacı tam karşılayan en küçük uygulama planını öner. Düzenlemeden önce varsayımları ve doğrulama adımlarını belirt.

@@ -29,16 +29,18 @@ gtterm lang tr
 
 Parametresiz kullanım geçerli dili gösterir. `en`/`tr` seçimi `state/language` dosyasına kaydedilir ve mevcut terminale uygulanır. Diğer açık terminaller `gtterm reload` kullanabilir. Geçersiz seçim kayıtlı tercihi değiştirmez; bozuk kayıtlı tercih İngilizceye döner.
 
-## Tema
+## Tema ve görünüm
 
 ```sh
-gtterm theme mocha
+gtterm theme list
 gtterm theme nord
-gtterm theme latte
+gtterm theme preview dracula
+gtterm style list
+gtterm style minimal
+gtterm config
 ```
 
-Tek bir tema adı gerekir. gtterm prompt renklerini, mevcut vurgu/öneri renklerini ve iTerm paletini bu oturum için değiştirir. Tema komutu normal oturuma eksik eklentileri kurmaz, varsayılan profili/macOS temasını değiştirmez ve sonraki pencerelere tema kaydetmez. Kurucu ise ayrıca Nord profilini varsayılan kaydeder. Palet kontrolü iTerm gerektirir; bu sürüm tmux/screen üzerinden iletmez.
-
+Tema adı renkleri mevcut ve sonraki gtterm oturumları için uygular/kaydeder. `preview <ad>` yalnızca bu oturumda dener. Prompt görünümü temadan bağımsız ve kalıcıdır. Kayıtlı tema profilin başlangıç renginin önüne geçer; iTerm varsayılan profili ve macOS görünümü değiştirilmez. Tam prompt/eklenti özellikleri için tam gtterm profili gerekir. Palet kontrolü iTerm içindir; tmux/screen üzerinden iletilmez. Kabul edilen değerler ve sıfırlama için [bütün ayarlara](themes.md) bakın.
 
 ## Proxy
 
@@ -92,4 +94,30 @@ Başarılı işlemler genellikle 0 döner. Geçersiz parametre/adres/alan adı, 
 Tercihler `~/.config/iterm-pack/state` altında düz veri olarak tutulur; shell kodu olarak değerlendirilmez. Diğer Mac'leri etkilemez. Kurulu klasörü ZIP'lemek yerine temiz dağıtım ZIP'ini paylaşın.
 
 
-[18 temanın tamamı ve örnekler](themes.md).
+[40 temanın tamamı ve örnekler](themes.md).
+
+
+## Kalıcı görünüm ayarları
+
+`gtterm theme <ad>` temayı kaydeder; `gtterm theme preview <ad>` geçici dener. `gtterm style <ad>` bağımsız prompt görünümünü seçer. `gtterm config` ayar menüsünü açar. Etkileşimsiz kullanım: `gtterm config show`, `gtterm config set <anahtar> <değer>`, `gtterm config reset`. [Bütün ayarlar ve 40 tema](themes.md).
+
+
+## Araçlar ve hazır görünümler
+
+[Araçlar, kısayollar, hazır görünümler ve tek komutla güncelleme](tools.md). Yerel belge için `gtterm docs tools` kullan.
+
+
+## 3.0 CLI çalışma alanı
+
+[Control+Esc hotkey, canlı paletler, isteğe bağlı efektler ve CLI uyumluluğu](cli.md), [güvenli tekrar kullanılabilir parçalar](snippets.md). Komutlar: `gtterm hotkey`, `gtterm effect`, `gtterm cli`, `gtterm snippet`.
+
+
+[Yerleşik durum çubuğu, sekme başlıkları, retrowave ve komut paleti](visual.md).
+
+
+## Mac araçları ve kaynak izleyici
+
+[Mac komut kılavuzu](mac.md): `gtterm monitor`, `gtterm sysinfo`, `gtterm finder`, `gtterm preview`, `gtterm copy-path`, `gtterm copy`, `gtterm disk`, `gtterm awake` ve `gtterm background`.
+
+
+[Yerleşik yazı efektleri ve retro fontlar](effects.md), arka plan resmi/saydamlık ayarlarından bağımsızdır.

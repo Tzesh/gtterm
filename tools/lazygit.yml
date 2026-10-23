@@ -1,0 +1,5 @@
+# Defaults for the bundled lazygit; override with your own LG_CONFIG_FILE.
+git:
+  autoFetch: false
+update:
+  method: never

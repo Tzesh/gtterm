@@ -1,0 +1,286 @@
+{
+  "tools": [
+    {
+      "name": "fzf",
+      "version": "0.64.0",
+      "architecture": "arm64",
+      "repository": "https://github.com/junegunn/fzf",
+      "archive": "https://github.com/junegunn/fzf/releases/download/v0.64.0/fzf-0.64.0-darwin_arm64.tar.gz",
+      "archive_sha256": "c71d2528e090de5d4765017d745f8a4fed44b43703f93247a28f6dc2aa4c7c01",
+      "file": "tools/arm64/fzf",
+      "binary_sha256": "f909f52c4170d906ef2513605a031cfe8979acd1c729fe9f506bb39c94def073",
+      "licenses": [
+        "licenses/fzf/LICENSE"
+      ],
+      "minimum_macos": "11.0"
+    },
+    {
+      "name": "fzf",
+      "version": "0.64.0",
+      "architecture": "x86_64",
+      "repository": "https://github.com/junegunn/fzf",
+      "archive": "https://github.com/junegunn/fzf/releases/download/v0.64.0/fzf-0.64.0-darwin_amd64.tar.gz",
+      "archive_sha256": "9fb8180bbd1bb06af4e3f7bc8e8f8e84b3fde12297d6e187dd699a4f620042bb",
+      "file": "tools/x86_64/fzf",
+      "binary_sha256": "381b4372ed0331f2be880823fc54dce7be4f10362d3f44eddd2ad3cf2752c2be",
+      "licenses": [
+        "licenses/fzf/LICENSE"
+      ],
+      "minimum_macos": "11.0"
+    },
+    {
+      "name": "zoxide",
+      "version": "0.10.0",
+      "architecture": "arm64",
+      "repository": "https://github.com/ajeetdsouza/zoxide",
+      "archive": "https://github.com/ajeetdsouza/zoxide/releases/download/v0.10.0/zoxide-0.10.0-aarch64-apple-darwin.tar.gz",
+      "archive_sha256": "b55ae6f2f5f23d0a6ccb3bd4eeb2af9c7e0a6556e5255c82100e40305129bbb0",
+      "file": "tools/arm64/zoxide",
+      "binary_sha256": "10164141fc2d49a12ca9434e3a5b9ca6206d0d30e17ca7b6f573bd63cfc70bb6",
+      "licenses": [
+        "licenses/zoxide/LICENSE"
+      ],
+      "minimum_macos": "11.0"
+    },
+    {
+      "name": "zoxide",
+      "version": "0.10.0",
+      "architecture": "x86_64",
+      "repository": "https://github.com/ajeetdsouza/zoxide",
+      "archive": "https://github.com/ajeetdsouza/zoxide/releases/download/v0.10.0/zoxide-0.10.0-x86_64-apple-darwin.tar.gz",
+      "archive_sha256": "18ab7ae2633ad6e2ab79a4e665cbba1e95b7c872d44523326efb793202451dad",
+      "file": "tools/x86_64/zoxide",
+      "binary_sha256": "df95aa58615d551ce6793a2be3f0ae0702ed2ffab7aa0f882ee18cb5f512711b",
+      "licenses": [
+        "licenses/zoxide/LICENSE"
+      ],
+      "minimum_macos": "11.0"
+    },
+    {
+      "name": "rg",
+      "version": "15.2.0",
+      "architecture": "arm64",
+      "repository": "https://github.com/BurntSushi/ripgrep",
+      "archive": "https://github.com/BurntSushi/ripgrep/releases/download/15.2.0/ripgrep-15.2.0-aarch64-apple-darwin.tar.gz",
+      "archive_sha256": "3750b2e93f37e0c692657da574d7019a101c0084da05a790c83fd335bad973e4",
+      "file": "tools/arm64/rg",
+      "binary_sha256": "a326a1fb48074202e9ad41e4cd1e389eeea372c8c6f7d7e80da81176d5d9430e",
+      "licenses": [
+        "licenses/rg/COPYING",
+        "licenses/rg/LICENSE-MIT",
+        "licenses/rg/UNLICENSE"
+      ],
+      "minimum_macos": "11.0"
+    },
+    {
+      "name": "rg",
+      "version": "15.2.0",
+      "architecture": "x86_64",
+      "repository": "https://github.com/BurntSushi/ripgrep",
+      "archive": "https://github.com/BurntSushi/ripgrep/releases/download/15.2.0/ripgrep-15.2.0-x86_64-apple-darwin.tar.gz",
+      "archive_sha256": "af7825fcc69a2afc7a7aea55fc9af90e26421d8f20fe59df32e233c0b8a231c1",
+      "file": "tools/x86_64/rg",
+      "binary_sha256": "0c9a0066db0d26b640777db88045b0ccdd58509a746700e43e1c4ff8707a5ed0",
+      "licenses": [
+        "licenses/rg/COPYING",
+        "licenses/rg/LICENSE-MIT",
+        "licenses/rg/UNLICENSE"
+      ],
+      "minimum_macos": "11.0"
+    },
+    {
+      "name": "fd",
+      "version": "10.5.0",
+      "architecture": "arm64",
+      "repository": "https://github.com/sharkdp/fd",
+      "archive": "https://github.com/sharkdp/fd/releases/download/v10.5.0/fd-v10.5.0-aarch64-apple-darwin.tar.gz",
+      "archive_sha256": "b67e1836c468e42e411984b56e52fa7abec08c2bd22c867398e7cc134aac5e12",
+      "file": "tools/arm64/fd",
+      "binary_sha256": "cf3bde435da174f41cf9589a2efeaf03804df7c250fc15e8b8a1e9bfc66ebc9a",
+      "licenses": [
+        "licenses/fd/LICENSE-APACHE",
+        "licenses/fd/LICENSE-MIT"
+      ],
+      "minimum_macos": "11.0"
+    },
+    {
+      "name": "fd",
+      "version": "10.5.0",
+      "architecture": "x86_64",
+      "repository": "https://github.com/sharkdp/fd",
+      "archive": "https://github.com/sharkdp/fd/releases/download/v10.5.0/fd-v10.5.0-x86_64-apple-darwin.tar.gz",
+      "archive_sha256": "7e31028c62c6955877735d0406807aa484c2a5e6f86235a59e26c29c301da590",
+      "file": "tools/x86_64/fd",
+      "binary_sha256": "7ca13c0959482c381a4de9b85fe8bef4233ab7e5232761e958ed0df3583baa89",
+      "licenses": [
+        "licenses/fd/LICENSE-APACHE",
+        "licenses/fd/LICENSE-MIT"
+      ],
+      "minimum_macos": "11.0"
+    },
+    {
+      "name": "bat",
+      "version": "0.26.1",
+      "architecture": "arm64",
+      "repository": "https://github.com/sharkdp/bat",
+      "archive": "https://github.com/sharkdp/bat/releases/download/v0.26.1/bat-v0.26.1-aarch64-apple-darwin.tar.gz",
+      "archive_sha256": "e30beff26779c9bf60bb541e1d79046250cb74378f2757f8eb250afddb19e114",
+      "file": "tools/arm64/bat",
+      "binary_sha256": "226a607a97825e57e661760320b03b7bea60c552c82e2f88bded07b5eaf0fab3",
+      "licenses": [
+        "licenses/bat/LICENSE-APACHE",
+        "licenses/bat/LICENSE-MIT"
+      ],
+      "minimum_macos": "11.0"
+    },
+    {
+      "name": "bat",
+      "version": "0.26.1",
+      "architecture": "x86_64",
+      "repository": "https://github.com/sharkdp/bat",
+      "archive": "https://github.com/sharkdp/bat/releases/download/v0.26.1/bat-v0.26.1-x86_64-apple-darwin.tar.gz",
+      "archive_sha256": "830d63b0bba1fa040542ec569e3cf77f60d3356b9de75116a344b061e0894245",
+      "file": "tools/x86_64/bat",
+      "binary_sha256": "5a2a46efcd3ace7b044e12f182bdc486470edf2bfcc0ae7508c3bb8290f9ea22",
+      "licenses": [
+        "licenses/bat/LICENSE-APACHE",
+        "licenses/bat/LICENSE-MIT"
+      ],
+      "minimum_macos": "11.0"
+    },
+    {
+      "name": "lazygit",
+      "version": "0.66.2",
+      "architecture": "arm64",
+      "repository": "https://github.com/jesseduffield/lazygit",
+      "archive": "https://github.com/jesseduffield/lazygit/releases/download/v0.66.2/lazygit_0.66.2_darwin_arm64.tar.gz",
+      "archive_sha256": "fadda59ae7665ba556fcbaa704c7eade6e40d016d3f3b25d6327dd1f3f906a0c",
+      "file": "tools/arm64/lazygit",
+      "binary_sha256": "f5fec331953589ef11aa9a65851a62867398ebdb5bc03c4b3616c60ffa9163f5",
+      "licenses": [
+        "licenses/lazygit/LICENSE"
+      ],
+      "minimum_macos": "12.0"
+    },
+    {
+      "name": "lazygit",
+      "version": "0.66.2",
+      "architecture": "x86_64",
+      "repository": "https://github.com/jesseduffield/lazygit",
+      "archive": "https://github.com/jesseduffield/lazygit/releases/download/v0.66.2/lazygit_0.66.2_darwin_x86_64.tar.gz",
+      "archive_sha256": "de5d3771e4befa6fe17590e21445614998adc1ef34a71f4003df6764247517ab",
+      "file": "tools/x86_64/lazygit",
+      "binary_sha256": "84dcb453c60ecea89f445476def3eb6be719da04cbf9553de29171605e966805",
+      "licenses": [
+        "licenses/lazygit/LICENSE"
+      ],
+      "minimum_macos": "12.0"
+    },
+    {
+      "name": "jq",
+      "version": "1.8.2",
+      "architecture": "arm64",
+      "repository": "https://github.com/jqlang/jq",
+      "archive": "https://github.com/jqlang/jq/releases/download/jq-1.8.2/jq-macos-arm64",
+      "archive_sha256": "2d75340ba57a4b4b4c8708a21c2dc8e958a48aaa8bba13b27f77f6e4c0eca07e",
+      "file": "tools/arm64/jq",
+      "binary_sha256": "2d75340ba57a4b4b4c8708a21c2dc8e958a48aaa8bba13b27f77f6e4c0eca07e",
+      "licenses": [
+        "licenses/jq/COPYING"
+      ],
+      "minimum_macos": "14.0"
+    },
+    {
+      "name": "jq",
+      "version": "1.8.2",
+      "architecture": "x86_64",
+      "repository": "https://github.com/jqlang/jq",
+      "archive": "https://github.com/jqlang/jq/releases/download/jq-1.8.2/jq-macos-amd64",
+      "archive_sha256": "e94b266e3c26690550006abe63152b782280f4e14374accdf04cbde844f00bc0",
+      "file": "tools/x86_64/jq",
+      "binary_sha256": "e94b266e3c26690550006abe63152b782280f4e14374accdf04cbde844f00bc0",
+      "licenses": [
+        "licenses/jq/COPYING"
+      ],
+      "minimum_macos": "14.0"
+    },
+    {
+      "name": "btm",
+      "version": "0.14.9",
+      "architecture": "arm64",
+      "repository": "https://github.com/ClementTsang/bottom",
+      "archive": "https://github.com/ClementTsang/bottom/releases/download/0.14.9/bottom_aarch64-apple-darwin.tar.gz",
+      "archive_sha256": "28358e19a3d62b3778fc0d1778b0028a682059145c9ac38ac5076bf124d77714",
+      "file": "tools/arm64/btm",
+      "binary_sha256": "30da99d815f4e1a47ad58347d4a9c3317e7434917cbcb28742ca1a762d28f8e7",
+      "licenses": [
+        "licenses/btm/LICENSE"
+      ],
+      "minimum_macos": "11.0"
+    },
+    {
+      "name": "btm",
+      "version": "0.14.9",
+      "architecture": "x86_64",
+      "repository": "https://github.com/ClementTsang/bottom",
+      "archive": "https://github.com/ClementTsang/bottom/releases/download/0.14.9/bottom_x86_64-apple-darwin.tar.gz",
+      "archive_sha256": "d0b1d446963ee3c4dfbfe2efd9614cfdc77f39e8268bf8cc2e0b5b6cea982774",
+      "file": "tools/x86_64/btm",
+      "binary_sha256": "266bed1d308fde42b3a8803faf1faa43ab006768a79cb9ed90ecb78de5921f3f",
+      "licenses": [
+        "licenses/btm/LICENSE"
+      ],
+      "minimum_macos": "11.0"
+    },
+    {
+      "name": "fastfetch",
+      "version": "2.70.0",
+      "architecture": "arm64",
+      "repository": "https://github.com/fastfetch-cli/fastfetch",
+      "archive": "https://github.com/fastfetch-cli/fastfetch/releases/download/2.70.0/fastfetch-macos-universal.tar.gz",
+      "archive_sha256": "8e3e2f3583a5b43ea20c451edfe0dac7172835c5b7de97a96347168f31106558",
+      "file": "tools/arm64/fastfetch",
+      "binary_sha256": "f1f13630263d1db566474703cd2f533b4187e50aecb9646879e73ac9056f251d",
+      "licenses": [
+        "licenses/fastfetch/LICENSE"
+      ],
+      "minimum_macos": "26.0"
+    },
+    {
+      "name": "fastfetch",
+      "version": "2.70.0",
+      "architecture": "x86_64",
+      "repository": "https://github.com/fastfetch-cli/fastfetch",
+      "archive": "https://github.com/fastfetch-cli/fastfetch/releases/download/2.70.0/fastfetch-macos-universal.tar.gz",
+      "archive_sha256": "8e3e2f3583a5b43ea20c451edfe0dac7172835c5b7de97a96347168f31106558",
+      "file": "tools/x86_64/fastfetch",
+      "binary_sha256": "f1f13630263d1db566474703cd2f533b4187e50aecb9646879e73ac9056f251d",
+      "licenses": [
+        "licenses/fastfetch/LICENSE"
+      ],
+      "minimum_macos": "26.0"
+    }
+  ],
+  "source_commits": {
+    "fzf": "0076ec2e8d66a725555c256acbe46292019dc1a7",
+    "zoxide": "f84f9a3e1d16fabf3e34b199ec7d552993b41f29",
+    "rg": "e89fff89ac9af12e8d4ce9d5fd07beb408ca730f",
+    "fd": "4f81778774463bf414a184cbe6d5219ad2229646",
+    "bat": "979ba22628bc9d8171f2cffca2bd5c90c9fc0a9e",
+    "lazygit": "63ab89fff478854deb4a35ef8902676b3cc5ca72",
+    "jq": "34f7186b86743a083a589741b6cea95293524108",
+    "btm": "e22236a928eeb876b2ccaad2f3d1ce5f6450281a",
+    "fastfetch": "17bb3fd2384bd814b421d73b8c8b8d08e06cfa26"
+  },
+  "shell_integration": {
+    "fzf": {
+      "url": "https://raw.githubusercontent.com/junegunn/fzf/0076ec2e8d66a725555c256acbe46292019dc1a7/shell/key-bindings.zsh",
+      "sha256": "835c4a62d1f11e4d68877caad73450ec3873f98a833b2f2cf0733d4fffcd74a2"
+    },
+    "zoxide": {
+      "generated_by": "zoxide init zsh --no-cmd",
+      "version": "v0.10.0",
+      "sha256": "8f9c294ce883e60964efacdb758aebb5318d887f7ae7dcb90436e89164c70db4"
+    }
+  }
+}

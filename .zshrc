@@ -1,5 +1,7 @@
 # gtterm: isolated from the normal ~/.zshrc.
 typeset -g TERMINAL_PACK_DIR=${${(%):-%x}:A:h}
+source "$TERMINAL_PACK_DIR/themes.zsh"
+source "$TERMINAL_PACK_DIR/settings.zsh"
 export ZSH="$TERMINAL_PACK_DIR/vendor/oh-my-zsh"
 export ZSH_CUSTOM="$TERMINAL_PACK_DIR/custom"
 export ZSH_CACHE_DIR="$TERMINAL_PACK_DIR/cache/omz"
@@ -31,6 +33,9 @@ bindkey '^[[C' forward-char
 bindkey '^[f' forward-word
 [[ -r "$TERMINAL_PACK_DIR/local.zsh" ]] && source "$TERMINAL_PACK_DIR/local.zsh"
 source "$TERMINAL_PACK_DIR/devtools.zsh"
+_gt_tools_shell_init
 source "$TERMINAL_PACK_DIR/vendor/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 _pack_apply_highlights
 _pack_apply_palette
+
+_gt_directory_init

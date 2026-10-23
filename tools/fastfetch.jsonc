@@ -1,0 +1,4 @@
+{
+  "logo": { "type": "builtin", "source": "macos_small", "padding": { "right": 3 } },
+  "modules": ["os", "kernel", "uptime", "cpu", "memory", "battery", "terminal"]
+}

@@ -1,16 +1,45 @@
 #compdef gtterm
-local -a subcommands=(help status doctor lang theme proxy chrome ports java docs reload version)
+local -a subcommands=(help status doctor lang theme style config preset jump tools effect background monitor sysinfo finder preview copy-path copy disk awake hotkey snippet cli menu statusbar tabs proxy chrome ports java docs reload version)
 case $CURRENT in
   2) _describe command subcommands ;;
   3)
     case $words[2] in
       lang) compadd en tr ;;
-      theme) compadd list $GTTERM_THEMES ;;
+      theme) compadd list preview $GTTERM_THEMES ;;
+      style) compadd list $GTTERM_STYLES ;;
+      config) compadd show set reset ;;
+      preset) compadd list work focus presentation ;;
+      jump) _directories ;;
+      tools) compadd status verify ;;
+      background) compadd list off glass frost retrowave ;;
+      effect) compadd list status apply $GTTERM_EFFECTS ;;
+      monitor) compadd tree basic ;;
+      finder|preview|copy-path|disk) _files ;;
+      awake) compadd -- -- ;;
+      statusbar) compadd status off minimal dashboard ;;
+      tabs) compadd status smart profile ;;
+      hotkey) compadd on off status ;;
+      snippet) compadd list show copy pick ;;
       proxy) compadd on off auto status ;;
       ports) compadd java jboss 8080 8443 9990 9993 8787 ;;
       java) compadd list ;;
       chrome) compadd jboss.local ;;
-      docs) compadd guide commands themes troubleshooting ;;
+      docs) compadd guide commands themes tools cli snippets visual effects mac troubleshooting ;;
     esac ;;
-  4) [[ $words[2] == proxy && $words[3] == auto ]] && compadd on off status ;;
+  4)
+    case "$words[2]:$words[3]" in
+      proxy:auto) compadd on off status ;;
+      theme:preview) compadd $GTTERM_THEMES ;;
+      snippet:show|snippet:copy) compadd -- ${(@f)$(_gt_snippet_names)} ;;
+      config:set) compadd $GTTERM_SETTING_KEYS ;;
+    esac ;;
+  5)
+    if [[ $words[2] == config && $words[3] == set ]]; then
+      case $words[4] in
+        theme) compadd $GTTERM_THEMES ;; style) compadd $GTTERM_STYLES ;;
+        font-size) compadd {12..22} ;; line-spacing) compadd compact normal relaxed ;;
+        effect) compadd $GTTERM_EFFECTS ;; background) compadd off glass frost retrowave ;; status-bar) compadd off minimal dashboard ;; tabs) compadd smart profile ;; cursor) compadd block beam underline ;;
+        hotkey|icons|suggestions) compadd on off ;; prompt-spacing) compadd comfortable compact ;;
+      esac
+    fi ;;
 esac

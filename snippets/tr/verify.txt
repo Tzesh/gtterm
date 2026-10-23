@@ -1,0 +1,1 @@
+İstenen işin tamamlanıp tamamlanmadığını kontrol et. İlgili mevcut kontrolleri çalıştır, kanıtları ve doğrulanamayan davranışları belirt. Kapsamı genişletme.

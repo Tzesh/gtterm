@@ -1,5 +1,45 @@
 # Changelog
 
+## 3.0.0 — 2026-10-23
+
+- 40 coordinated palettes and five prompt styles, persistent settings/menu and Work, Focus and Presentation presets.
+- Native text effects: retro, fallout, amber, typewriter and neon; bundled OFL VT323 with Meslo Unicode fallback. Independent background off/glass/frost/retrowave modes.
+- Complete effect-off restoration: Meslo, ASCII/non-ASCII smoothing, native Powerline rendering, thin strokes, theme colors, saved cursor shape and normal cursor animation/blink. Font size, spacing and background stay selected.
+- Correct native Powerline preference key. Native current-profile reapplication clears session overrides, with explicit apply and existing iTerm permission handling.
+- Control+Esc top dropdown, native status bar/CPU-RAM dashboard, smart directory/job tab titles and command palette.
+- Nine pinned offline tools for Intel/Apple Silicon: fzf, zoxide, rg, fd, bat, lazygit, jq, bottom and Fastfetch. Read-only resource monitor and compact system summary.
+- Reusable bilingual snippets, AI CLI availability report, Finder/Quick Look/clipboard/disk/awake helpers.
+- One installer for fresh installs and in-place upgrades, with private backup/rollback and preserved user settings. No sudo, Homebrew or installer-time download.
+- Validate generated profiles as native property lists; empty background paths prevent the iTerm startup crash caused by JSON null.
+- Updated English/Turkish documentation, README and offline galleries. No shader/alternate terminal, provider installation, new Java/JBoss features or input remapping.
+
+## 2.5.0 — offline tools and workspace presets
+
+- Bundle fzf, zoxide, ripgrep, fd and bat for Apple Silicon and Intel; no sudo, Homebrew or installer-time downloads.
+- Pinned release archives, SHA256 integrity manifest, upstream sources and licenses.
+- Explicit `--trust-tools` activation limited to verified tool executables; quarantined integrations are skipped by default.
+- Fuzzy history/file/directory bindings, bat previews, theme-aware colors and `gtterm jump`.
+- Persistent Work, Focus and Presentation presets; palette, language and proxy retained.
+- Same installer upgrades in place and preserves private preferences/database; bilingual tools documentation and gallery presets.
+- README unchanged; no JBoss log coloring.
+
+## 2.4.0 — 36 themes and persistent customization
+
+- Added 18 bundled palettes; all 36 original/named profiles have stable identifiers.
+- Five independent prompt styles: rounded, minimal, powerline, compact and ASCII.
+- Persistent theme/style, font size, line spacing, icons, prompt spacing and suggestions.
+- Added `gtterm config` menu, validated show/set/reset commands and complete tab completion.
+- Temporary theme preview does not overwrite the saved theme; updates preserve preferences.
+- Updated bilingual documentation and theme/style gallery; README unchanged.
+
+## 2.3.0 — rounded workspace and one-command upgrades
+
+- Rounded Powerlevel10k prompt capsules, a subtle two-line guide and clearer error/duration blocks.
+- Larger 15-point font, more line spacing and theme-colored tabs across all 18 profiles.
+- `zsh install.zsh` installs fresh or upgrades in place, preserving personal settings, user dotfiles and the selected iTerm default.
+- Upgrades stage replacement files, keep a private backup and roll back failed runtime/profile switches.
+- Nord default, user settings and the gitstatusd workaround are preserved.
+
 ## 2.2.0 — 18 coordinated themes
 
 - Added 15 themes with matching iTerm palettes, Powerlevel10k colors, suggestions and syntax highlights.

@@ -29,16 +29,18 @@ gtterm lang tr
 
 No argument shows the language. `en`/`tr` saves it to `state/language` and applies it to this shell. Existing other shells can run `gtterm reload`. Invalid values are rejected without changing the preference. English is the fallback when a saved preference is invalid.
 
-## Theme
+## Theme and style
 
 ```sh
-gtterm theme mocha
+gtterm theme list
 gtterm theme nord
-gtterm theme latte
+gtterm theme preview dracula
+gtterm style list
+gtterm style minimal
+gtterm config
 ```
 
-Exactly one theme is required. The command changes gtterm's prompt colors, available highlighting/suggestion colors, and the iTerm palette for the current session. The theme command does not install missing plugins into an ordinary shell, change the default profile, save a theme for all future windows or change your macOS theme. The installer separately selects Nord as the saved default profile. Palette control requires iTerm; it is not forwarded through tmux/screen by this version.
-
+A theme name applies and saves the palette for future gtterm sessions. `preview <name>` applies only in this shell. Styles are independent and persistent. A saved theme overrides named profile startup colors; the iTerm default profile and macOS appearance are unchanged. Full prompt/plugin features require a full gtterm profile. Palette control is intended for iTerm, not forwarded through tmux/screen. See [all settings](themes.md) for accepted values and reset behavior.
 
 ## Proxy
 
@@ -92,4 +94,30 @@ Successful inspection/actions normally return 0. Invalid arguments, invalid prox
 State is plain local data under `~/.config/iterm-pack/state`; it is never evaluated as shell code. Preferences affect this Mac, not other machines. To share the setup, copy the clean ZIP rather than zipping your installed directory.
 
 
-[All 18 themes and examples](themes.md).
+[All 40 themes and examples](themes.md).
+
+
+## Persistent customization
+
+Use `gtterm theme <name>` to save a theme, `gtterm theme preview <name>` for a temporary preview, `gtterm style <name>` for an independent prompt style, and `gtterm config` for the settings menu. Noninteractive use: `gtterm config show`, `gtterm config set <key> <value>`, `gtterm config reset`. See [all settings and 40 themes](themes.md).
+
+
+## Tools and workspace presets
+
+See [tools, keyboard shortcuts, presets and the single-command update](tools.md). Use `gtterm docs tools` to read this documentation locally.
+
+
+## 3.0 CLI workspace
+
+See [Control+Esc hotkey, vivid palettes, optional effects and CLI compatibility](cli.md) and [safe reusable snippets](snippets.md). Commands: `gtterm hotkey`, `gtterm effect`, `gtterm cli`, `gtterm snippet`.
+
+
+[Native status bar, tab titles, retrowave and command palette](visual.md).
+
+
+## Mac tools and system monitor
+
+[Read the Mac command guide](mac.md): `gtterm monitor`, `gtterm sysinfo`, `gtterm finder`, `gtterm preview`, `gtterm copy-path`, `gtterm copy`, `gtterm disk`, `gtterm awake` and `gtterm background`.
+
+
+[Native text effects and retro fonts](effects.md) are separate from background image/transparency settings.
