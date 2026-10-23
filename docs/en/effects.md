@@ -2,7 +2,7 @@
 
 [Commands](commands.md) · [Background/tabs/status](visual.md) · [Türkçe](../tr/effects.md)
 
-`gtterm effect` changes native text typography, colors and cursor behavior. `gtterm background` independently retains off/glass/frost/retrowave images/transparency/blur. Both are saved; initial defaults remain Nord, background off, effect off. 
+`gtterm effect` changes native text typography, colors and cursor behavior. `gtterm background` independently retains off/glass/frost/retrowave images/transparency/blur. Both are saved; initial defaults remain Nord, background off, effect off.
 
 ```sh
 gtterm effect list

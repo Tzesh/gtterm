@@ -2,7 +2,7 @@
 
 [Komutlar](commands.md) · [Arka plan/sekmeler/durum](visual.md) · [English](../en/effects.md)
 
-`gtterm effect`, yerleşik yazı/font/renk/imleç görünümünü değiştirir. `gtterm background`, bağımsız olarak off/glass/frost/retrowave resim/saydamlık/bulanıklık seçeneklerini korur. İkisi ayrı kaydedilir. İlk kullanım varsayılanları Nord, arka plan kapalı, efekt kapalıdır. 
+`gtterm effect`, yerleşik yazı/font/renk/imleç görünümünü değiştirir. `gtterm background`, bağımsız olarak off/glass/frost/retrowave resim/saydamlık/bulanıklık seçeneklerini korur. İkisi ayrı kaydedilir. İlk kullanım varsayılanları Nord, arka plan kapalı, efekt kapalıdır.
 
 ```sh
 gtterm effect list
